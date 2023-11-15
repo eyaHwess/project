@@ -1,0 +1,11 @@
+{
+    "account":[
+        {
+            "name":"Eya",
+            "CIN":1123232,
+            "email":"eya@gmail.com",
+            "password":"eya121234",
+            "phoneNumber":23234345
+        }
+    ]
+}

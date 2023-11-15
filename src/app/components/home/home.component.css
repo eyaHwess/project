@@ -1,0 +1,129 @@
+header{
+    background-color:#f0f0f0 ;
+    width: 100%;
+    position: fixed;
+    z-index: 999; 
+    /* z-index: the order of the header i gave it a heigher number so it always stays on the top */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px ;
+}
+.logo{
+    text-decoration: none;
+    color: #254ebe;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+.navigation a{
+    color: #254ebe;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+.navigation a:hover{
+    color:#601cfc; 
+}
+section{
+    padding: 100px 160px;
+}
+ .intro{
+    padding-top: 130px;
+    width:500px
+} 
+.main{
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(/assets/back.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.main h2{
+    color: #CCCCCC;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+.main h2 span{
+    display: inline-block;
+    margin-top: 10px;
+    color:rgb(46, 29, 232);
+    font-size:2em ;
+    font-weight: 600;
+}
+.main h3{
+    color: #CCCCCC;
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.main-btn{
+    color: #fff;
+    text-decoration: none;
+    background-color: #0e6ee3;
+    font-size: 1.1em;
+    font-weight: 600; 
+    /* inlineblock so we can do a margin and padding property */
+    display: inline-block;
+    padding: 0.8375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom:40px ;
+    transition: 0.7s ease;
+}
+.main-btn:hover{
+    background-color: #601cfc;
+    transform: scale(1.1);
+}
+.social-icons a{
+    color: #fff;
+    font-size: 1.7em;
+    padding-right: 30px;
+}
+/* Services */
+.title{
+    display: flex;
+    justify-content: center;
+    color: #254ebe;
+    font-size: 2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.icon{
+    color: #0e6ee3;
+    font-size: 8em;
+    text-align: center;
+}
+.info{
+    text-align: center;
+}
+.info h3{
+    color: #0e6ee3;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
