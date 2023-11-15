@@ -1,0 +1,27 @@
+header{
+    background-color:#f0f0f0 ;
+    width: 100%;
+    position: fixed;
+    z-index: 999; 
+    /* z-index: the order of the header i gave it a heigher number so it always stays on the top */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px ;
+}
+.logo{
+    text-decoration: none;
+    color: #254ebe;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+.navigation a{
+    color: #254ebe;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+.navigation a:hover{
+    color:#601cfc; 
+}

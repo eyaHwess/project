@@ -1,16 +1,18 @@
 import { Participant } from "./participant";
-
 export class Event {
     constructor(
         public id:number,
  public picture:string,
  public name:string,
  public nbMax:number,
- public date :Date,
+ public date :string,
+ public dateL:string,
  public prize:string,
  public disponible:boolean,
  public detail:string,
- public participants:Participant[]){}
+ public participants:Participant[]){
+    
+ }
 
 
 }

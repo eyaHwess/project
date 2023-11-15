@@ -7,6 +7,8 @@ import { LoginComponent } from './components/login/login.component';
 import { SelectedEventComponent } from './components/selected-event/selected-event.component';
 import{HttpClientModule} from '@angular/common/http';
 import { EventComponent } from './components/event/event.component';
+import { HeaderComponent } from './components/header/header.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { EventComponent } from './components/event/event.component';
     HomeComponent,
     LoginComponent,
     SelectedEventComponent,
-    EventComponent
+    EventComponent,
+    HeaderComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
