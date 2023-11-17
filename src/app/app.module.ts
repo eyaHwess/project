@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './components/admin/admin.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AdminComponent } from './components/admin/admin.component';
     EventComponent,
     HeaderComponent,
     SignupComponent,
-    AdminComponent
+    AdminComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
