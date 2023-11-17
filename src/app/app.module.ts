@@ -9,6 +9,7 @@ import{HttpClientModule} from '@angular/common/http';
 import { EventComponent } from './components/event/event.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SignupComponent } from './components/signup/signup.component';
     SelectedEventComponent,
     EventComponent,
     HeaderComponent,
-    SignupComponent
+    SignupComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
