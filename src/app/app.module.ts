@@ -10,6 +10,8 @@ import { EventComponent } from './components/event/event.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ErrorComponent } from './error/error.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,11 +23,14 @@ import { ErrorComponent } from './error/error.component';
     HeaderComponent,
     SignupComponent,
     ErrorComponent
+   AdminComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

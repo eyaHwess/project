@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 import { AccountService } from 'src/app/services/account.service';
 import { Router, RouterModule, Routes } from '@angular/Router';
-
 
 @Component({
   selector: 'app-login',
@@ -10,6 +10,7 @@ import { Router, RouterModule, Routes } from '@angular/Router';
   styleUrls: ['./login.component.css']})
 export class LoginComponent {
   loginForm: FormGroup;
+
   constructor(private accountService: AccountService,
     private router: Router,
     private formBuilder: FormBuilder){
@@ -32,4 +33,6 @@ export class LoginComponent {
           console.error(error);
         }
       );}
-}
+} 
+
+
