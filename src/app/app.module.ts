@@ -16,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SupprimerComponent } from './components/admin_folder/events/supprimer/supprimer.component';
 import { ModifierComponent } from './components/admin_folder/events/modifier/modifier.component';
 import { ListeComponent } from './components/admin_folder/accounts/liste/liste.component';
+import { RequestsComponent } from './components/admin_folder/accounts/requests/requests.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ListeComponent } from './components/admin_folder/accounts/liste/liste.c
     AdminComponent,
     SupprimerComponent,
     ModifierComponent,
-    ListeComponent
+    ListeComponent,
+    RequestsComponent
   ],
   imports: [
     BrowserModule,
