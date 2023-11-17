@@ -33,7 +33,7 @@ import { ParticiperComponent } from './components/participer/participer.componen
     SignupComponent,
     AdminComponent,
 
-    FooterComponent
+    FooterComponent,
 
     SupprimerComponent,
     ModifierComponent,
