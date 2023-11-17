@@ -3,38 +3,30 @@
     <div class="intro">
         <h2>Hello,we are <br> <span> RobotRise</span></h2>
         <h3>Rejoignez notre Club de Robotique : <br> Concevez, construisez et participez à des compétitions ! </h3>
-        <a href="#events" class="main-btn"> View Events</a>
-        <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-solid fa-envelope"></i></a>
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-        </div>
+        <a href="#services" class="main-btn">View Events</a>
+        
     </div>
 </section>
-<section class="cards" id="services">
+<div class="cards" id="services">
     <h2 class="title">Events</h2>
     <div class="content">
+      <div *ngFor="let item of events">
         <div class="card">
-            <div class="icon">
-                <i class="fa-solid fa-code"></i>
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img src="{{item.picture}}" class="mx-auto d-block"/>
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
             </div>
-            <div class="info">
-                <h3>Web Development</h3>
-                <p>Design and build websites for individuals or small 
-                     businesses</p>
+            <div class="card-body">
+              <h5 class="card-title">{{item.name}}</h5>
+              <p class="card-text">Date: {{item.date|date}}.</p>
+              <p class="card-text">Date Limite: {{item.dateL|date}}.</p>
+              <a href="#!" class="btn btn-primary" *ngIf="item.disponible">Details</a>
+              <p class="text-secondary" *ngIf="!item.disponible">Coming soon...</p>
             </div>
-        </div>
-        <div class="card">
-            <div class="icon">
-                <i class="fa-solid fa-code"></i>
-            </div>
-            <div class="info">
-                <h3>Web Development</h3>
-                <p>Design and build websites for individuals or small 
-                     businesses</p>
-            </div>
+          </div>
         </div>
     </div>
-</section>
+  </div>
 <app-footer></app-footer>

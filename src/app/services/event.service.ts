@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Event } from 'src/app/classes/event';
 import {Observable}from 'rxjs'
-const URL=" http://localhost:3000/event";
+const URL=" http://localhost:3001/event";
 @Injectable({
   providedIn: 'root'
 })
