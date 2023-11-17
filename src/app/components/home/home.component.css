@@ -59,7 +59,12 @@ section{
     padding-right: 30px;
 }
 /* Services */
+
+#services{
+    height: 800px;
+}
 .title{
+    padding-top: 60px;
     display: flex;
     justify-content: center;
     color: #254ebe;
@@ -78,10 +83,9 @@ section{
     background-color: #fff;
     width: 21.25em;
     box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
-    border-radius: 10px;
-    padding: 25px;
     margin: 15px;
     transition: 0.7s ease;
+    height: 530px;
 }
 .card:hover{
     transform: scale(1.1);
@@ -99,4 +103,10 @@ section{
     font-size: 1.2em;
     font-weight: 700;
     margin: 10px;
+}
+.card img{
+    height: 300px;
+    width:100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius:5px;
 }
