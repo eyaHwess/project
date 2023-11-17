@@ -25,6 +25,7 @@ export class LoginComponent {
         (response) => {
           if (response && response.admin) {
             this.router.navigate(['/admin']);
+            
           } else {
             this.router.navigate(['/home']);
           }

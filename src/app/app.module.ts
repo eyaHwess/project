@@ -22,7 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     EventComponent,
     HeaderComponent,
     SignupComponent,
-    ErrorComponent
+    ErrorComponent,
    AdminComponent
 
   ],
