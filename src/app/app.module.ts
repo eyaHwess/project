@@ -10,9 +10,12 @@ import { EventComponent } from './components/event/event.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ErrorComponent } from './error/error.component';
-import { AdminComponent } from './components/admin/admin.component';
+import { AdminComponent } from './components/admin_folder/admin/admin.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
+import { SupprimerComponent } from './components/admin_folder/events/supprimer/supprimer.component';
+import { ModifierComponent } from './components/admin_folder/events/modifier/modifier.component';
+import { ListeComponent } from './components/admin_folder/accounts/liste/liste.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { FooterComponent } from './components/footer/footer.component';
     EventComponent,
     HeaderComponent,
     SignupComponent,
-    AdminComponent
+    AdminComponent,
+    SupprimerComponent,
+    ModifierComponent,
+    ListeComponent
   ],
   imports: [
     BrowserModule,
