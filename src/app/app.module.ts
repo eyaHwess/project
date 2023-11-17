@@ -17,6 +17,7 @@ import { SupprimerComponent } from './components/admin_folder/events/supprimer/s
 import { ModifierComponent } from './components/admin_folder/events/modifier/modifier.component';
 import { ListeComponent } from './components/admin_folder/accounts/liste/liste.component';
 import { RequestsComponent } from './components/admin_folder/accounts/requests/requests.component';
+import { ParticiperComponent } from './components/participer/participer.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { RequestsComponent } from './components/admin_folder/accounts/requests/r
     SupprimerComponent,
     ModifierComponent,
     ListeComponent,
-    RequestsComponent
+    RequestsComponent,
+    ParticiperComponent
   ],
   imports: [
     BrowserModule,
