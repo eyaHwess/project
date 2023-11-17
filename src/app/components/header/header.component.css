@@ -21,7 +21,31 @@ header{
     font-size: 1.1em;
     font-weight: 500;
     padding-left: 30px;
+    transition: 0.5s ease-in;
+}
+.c{
+    color: #254ebe;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
 }
 .navigation a:hover{
     color:#601cfc; 
 }
+
+#login {
+    padding: 10px 20px;
+    background-color: #254ebe;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    left: 20px;
+  }
+  #login:hover{
+    color:black; 
+    transition: 0.5s ease-in;
+    
+  }

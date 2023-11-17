@@ -18,4 +18,5 @@ export class AccountService {
   addAccount(newaccount: Account): Observable<Account> {
     return this.http.post<Account>(`${URL}/add`, newaccount);
   }
+  
   }
