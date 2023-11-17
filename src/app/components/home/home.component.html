@@ -1,13 +1,15 @@
 <section class="main" id="main">
-
     <div class="intro">
         <h2>Hello,we are <br> <span> RobotRise</span></h2>
         <h3>Rejoignez notre Club de Robotique : <br> Concevez, construisez et participez à des compétitions ! </h3>
         <a href="#services" class="main-btn">View Events</a>
-        
     </div>
 </section>
+
 <!-- EVents -->
+
+
+
 <div class="cards" id="services">
     <h2 class="title">Events</h2>
     <div class="content">
@@ -15,15 +17,15 @@
         <div class="card">
             <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
               <img src="{{item.picture}}" class="mx-auto d-block"/>
-              <a href="#!">
+              <!-- <a href="#!">
                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-              </a>
+              </a> -->
             </div>
             <div class="card-body">
               <h5 class="card-title">{{item.name}}</h5>
               <p class="card-text">Date: {{item.date| date}}.</p>
               <p class="card-text">Date Limite: {{item.dateL| date}}.</p>
-              <a href="#!" class="btn btn-primary" *ngIf="item.disponible">Details</a>
+              <a [routerLink]="['/home',item.id]" class="btn btn-primary" *ngIf="item.disponible">Details</a>
               <p class="text-secondary" *ngIf="!item.disponible">Coming soon...</p>
             </div>
           </div>

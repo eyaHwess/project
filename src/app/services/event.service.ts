@@ -11,6 +11,9 @@ export class EventService {
   constructor(private http:HttpClient) {}
   getEvents():Observable<Event[]>{
     return this.http.get<Event[]>(URL) ; }
+    getEventById(id:number):Observable<Event>{
+      return this.http.get<Event>(URL+"/"+id)
+    }
   addEvent(event:Event):Observable<Event>{
     return this.http.post<Event>(URL,event);
   }
