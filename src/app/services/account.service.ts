@@ -12,11 +12,20 @@ export class AccountService {
   authenticate(email: string, password: string): Observable<any> {
     return this.http.get<any>(`${URL}?email=${email}&password=${password}`);
     }
-  getAccounts():Observable<Account>{
-    return this.http.get<Account>(`${URL}`);
+  getAccounts():Observable<Account[]>{
+    return this.http.get<Account[]>(`${URL}`);
   }
   addAccount(newaccount: Account): Observable<Account> {
     return this.http.post<Account>(`${URL}/add`, newaccount);
   }
-  
+  deleteAccount(accountId: number): Observable<void> {
+    return this.http.delete<void>(`${URL}/${accountId}`);
   }
+
+  modifyAccount(accountId: number, modifiedAccount: Account): Observable<Account> {
+    return this.http.put<Account>(`${URL}/${accountId}`, modifiedAccount);
+  }
+  getAccountById(accountId: number):Observable<Account>{
+    return this.http.get<Account>(`${URL},${accountId}`);
+  
+  }}

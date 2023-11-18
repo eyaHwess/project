@@ -20,7 +20,6 @@ import { ListeComponent } from './components/admin_folder/accounts/liste/liste.c
 import { RequestsComponent } from './components/admin_folder/accounts/requests/requests.component';
 import { ParticiperComponent } from './components/participer/participer.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +47,6 @@ import { ParticiperComponent } from './components/participer/participer.componen
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
