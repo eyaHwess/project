@@ -23,7 +23,7 @@ export class LoginComponent {
       const { email, password } = this.loginForm.value;
       this.accountService.authenticate(email, password).subscribe(
         (response) => {
-          if (response && response.admin) {
+          if (response && response.admin === true) {
             this.router.navigate(['/admin']);
             
           } else {

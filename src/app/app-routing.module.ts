@@ -5,6 +5,8 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { SelectedEventComponent } from './components/selected-event/selected-event.component';
 import { ErrorComponent } from './error/error.component';
+import { AdminComponent } from './components/admin_folder/admin/admin.component';
+import { authGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -12,6 +14,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'home/:id',component:SelectedEventComponent},
+  {path:'admin',component:AdminComponent, canActivate:[authGuard]},
   {path:'**',component:ErrorComponent}
 ];
 

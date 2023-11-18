@@ -10,8 +10,8 @@ export class AccountService {
 
   constructor( private http:HttpClient) { }
   authenticate(email: string, password: string): Observable<any> {
-    return this.http.post(`${URL}/authenticate`, { email, password });
-  }
+    return this.http.get<any>(`${URL}?email=${email}&password=${password}`);
+    }
   getAccounts():Observable<Account>{
     return this.http.get<Account>(`${URL}`);
   }
