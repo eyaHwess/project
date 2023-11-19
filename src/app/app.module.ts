@@ -24,7 +24,6 @@ import { AjouterComponent } from './components/admin_folder/events/ajouter/ajout
 import { ListeMembresComponent } from './components/admin_folder/liste-membres/liste-membres.component';
 import { ListeAdminComponent } from './components/admin_folder/liste-admin/liste-admin.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +55,6 @@ import { ListeAdminComponent } from './components/admin_folder/liste-admin/liste
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

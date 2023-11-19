@@ -6,6 +6,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { SelectedEventComponent } from './components/selected-event/selected-event.component';
 import { ErrorComponent } from './error/error.component';
 import { AdminComponent } from './components/admin_folder/admin/admin.component';
+
 import { MenuComponent } from './components/admin_folder/menu/menu.component';
 import { EventComponent } from './components/event/event.component';
 import { ModifierComponent } from './components/admin_folder/events/modifier/modifier.component';
@@ -13,12 +14,16 @@ import { AjouterComponent } from './components/admin_folder/events/ajouter/ajout
 import { ListeAdminComponent } from './components/admin_folder/liste-admin/liste-admin.component';
 import { ListeMembresComponent } from './components/admin_folder/liste-membres/liste-membres.component';
 
+import { authGuard } from './guard/auth.guard';
+
+
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'home',component:HomeComponent},
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'home/:id',component:SelectedEventComponent},
+
   {path:'admin',component:AdminComponent,
 children:[
   {path:'/admin/menu',component:MenuComponent},
@@ -28,6 +33,9 @@ children:[
   {path:'/admin/listeAdmin',component:ListeAdminComponent},
   {path:'/admin/listeMenmbre',component:ListeMembresComponent}
 ]},
+
+  {path:'admin',component:AdminComponent, canActivate:[authGuard]},
+
   {path:'**',component:ErrorComponent}
 ];
 
