@@ -14,7 +14,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'home/:id',component:SelectedEventComponent},
-  {path:'admin',component:AdminComponent, canActivate:[authGuard]},
+  {path:'admin',component:AdminComponent},
   {path:'**',component:ErrorComponent}
 ];
 
