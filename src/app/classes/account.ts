@@ -1,6 +1,5 @@
 export class Account {
-    static nextId = 1;
-
+ static nextId = 1;
   constructor(
     public id: number,
     public name: string,
@@ -13,4 +12,5 @@ export class Account {
     // Set the id during the object creation
     this.id = Account.nextId++;
   }
+
 }

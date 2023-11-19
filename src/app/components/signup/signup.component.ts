@@ -4,6 +4,7 @@ import { AccountService } from 'src/app/services/account.service'
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { Router } from '@angular/Router';
+import { Account } from 'src/app/classes/account';
 
 @Component({
   selector: 'app-signup',
@@ -28,9 +29,38 @@ export class SignupComponent  {
       phoneNumber: [''],
     });
   }
+  formvalues: Account[]=[];
 ngOnInit() {
+  // this.accountService.getAccounts()
+  // .subscribe( 
+  //   data => 
+  //   this.formvalues = data)
+  // }
+  ;
+  
+  }
+  
+  onSubmit(){
+    if(this.signupForm.valid){
+      const values=this.signupForm.value;
+      this.accountService.addAccount(values).subscribe(
+        data =>console.log(data)
+      )
+    }
+  }
+  // onSubmit() {
+  //   if (this.signupForm.valid) {
+  //     const values = this.signupForm.value;
+  //     this.accountService.addAccount(values).subscribe(
+  //       data => console.log(data),
+  //       error => console.error('Error adding account', error)
+  //     );
+  //   }
+  // }
+  
+  
      }
-  onSubmit() {
+  // onSubmit() {
     // if (this.signupForm.valid) {
     //   // Form is valid, proceed with account creation
     //   const formData = this.signupForm.value;
@@ -51,7 +81,7 @@ ngOnInit() {
     //   // Form is invalid, mark fields as touched to show validation errors
     //   Object.values(this.signupForm.controls).forEach(control => control.markAsTouched());
     // }
-  }
+ // }
 
   // ngOnDestroy() {
   //   this.unsubscribe$.next();
@@ -59,5 +89,5 @@ ngOnInit() {
   // }
 
 
-}
+
 

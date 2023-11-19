@@ -19,6 +19,10 @@ import { ModifierComponent } from './components/admin_folder/events/modifier/mod
 import { ListeComponent } from './components/admin_folder/accounts/liste/liste.component';
 import { RequestsComponent } from './components/admin_folder/accounts/requests/requests.component';
 import { ParticiperComponent } from './components/participer/participer.component';
+import { MenuComponent } from './components/admin_folder/menu/menu.component';
+import { AjouterComponent } from './components/admin_folder/events/ajouter/ajouter.component';
+import { ListeMembresComponent } from './components/admin_folder/liste-membres/liste-membres.component';
+import { ListeAdminComponent } from './components/admin_folder/liste-admin/liste-admin.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +42,11 @@ import { ParticiperComponent } from './components/participer/participer.componen
     ModifierComponent,
     ListeComponent,
     RequestsComponent,
-    ParticiperComponent
+    ParticiperComponent,
+    MenuComponent,
+    AjouterComponent,
+    ListeMembresComponent,
+    ListeAdminComponent
   ],
   imports: [
     BrowserModule,
