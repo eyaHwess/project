@@ -46,6 +46,7 @@ ngOnInit() {
       this.accountService.addAccount(values).subscribe(
         data =>console.log(data)
       )
+      this.router.navigate(['/login']);
     }
   }
   // onSubmit() {

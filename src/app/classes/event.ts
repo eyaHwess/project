@@ -10,9 +10,12 @@ export class Event {
  public prize:string,
  public disponible:boolean,
  public detail:string,
- public participants:Participant[]){
+ public participants:Participant[],
+ public requests:Participant[],
+ ){
     
  }
+
 
 
 }

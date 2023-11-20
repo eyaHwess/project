@@ -23,19 +23,15 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'home/:id',component:SelectedEventComponent},
-
-  {path:'admin',component:AdminComponent,
+  {path:'admin',component:AdminComponent,canActivate:[authGuard],
 children:[
-  {path:'/admin/menu',component:MenuComponent},
-  {path:'/admin/event',component:EventComponent},
-  {path:'/admin/modifier',component:ModifierComponent},
-  {path:'/admin/ajouter',component:AjouterComponent},
-  {path:'/admin/listeAdmin',component:ListeAdminComponent},
-  {path:'/admin/listeMenmbre',component:ListeMembresComponent}
+  {path:'admin/menu',component:MenuComponent},
+  {path:'admin/event',component:EventComponent},
+  {path:'admin/modifier',component:ModifierComponent},
+  {path:'admin/ajouter',component:AjouterComponent},
+  {path:'admin/listeAdmin',component:ListeAdminComponent},
+  {path:'admin/listeMenmbre',component:ListeMembresComponent}
 ]},
-
-  {path:'admin',component:AdminComponent, canActivate:[authGuard]},
-
   {path:'**',component:ErrorComponent}
 ];
 

@@ -16,11 +16,11 @@ export class AccountService {
     return this.http.get<Account[]>(`${URL}`);
   }
   addAccount(newaccount: Account): Observable<Account> {
-    return this.http.post<Account>(`${URL}/add`, newaccount);
-  }
-  
+    return this.http.post<Account>(URL, newaccount);
   }
   getAccountById(accountId: number):Observable<Account>{
     return this.http.get<Account>(`${URL},${accountId}`);
   
-  }}
+  }
+  }
+  
