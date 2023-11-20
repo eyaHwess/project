@@ -1,7 +1,25 @@
-.section{
-    position: relative;
-    top: 100px;
-    width: 600px;
-    height: 800px;
 
-}
+
+.gradient-custom {
+    
+    background: url(/assets/backgroundtest.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    
+    }
+    
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    .card-registration .select-arrow {
+    top: 130px;
+    }
+    #phone{
+        position: relative;
+        top: -106px;
+    }

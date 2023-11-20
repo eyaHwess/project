@@ -21,7 +21,8 @@ login(email: string, password: string): void {
         if(authenticatedUser.admin){
           console.log("Admin connected");
           this.router.navigate(['admin']);
-        }else{
+        }
+        else{
           console.log("user connected");
           this.router.navigate(['/home']);
         }
@@ -40,7 +41,7 @@ login(email: string, password: string): void {
   }
   //Retourner l'authentication
   isLoggedIn(): boolean {
-    
+
     return this.isAuthenticated;
   } 
 

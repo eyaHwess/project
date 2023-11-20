@@ -31,7 +31,7 @@ children:[
   {path:'admin/modifier',component:ModifierComponent},
   {path:'admin/ajouter',component:AjouterComponent},
   {path:'admin/listeAdmin',component:ListeAdminComponent},
-  {path:'admin/listeMenmbre',component:ListeMembresComponent}]},
+  {path:'admin/listeMembre',component:ListeMembresComponent}]},
   {path:'participant',component:ParticiperComponent},
   {path:'**',component:ErrorComponent}
 ];

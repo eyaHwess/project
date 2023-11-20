@@ -6,14 +6,14 @@
         <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
           <div class="card-body p-4 p-md-5">
             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5" style="text-align: center;font-weight: bold;">Join Us </h3>
-            <form >
+            <form [formGroup]="participerForm">
 
               <div class="row">
                 <div class="col-md-6 mb-4">
                 <!-- Name Input -->
                   <div class="form-outline">
                     <input type="text" id="name" class="form-control form-control-lg" formControlName="name" placeholder="Enter your name"/>
-                    <label class="form-label" for="name">Your Name</label>
+                    <label class="form-label" for="name">Your Name: </label>
                   </div>
 
                 </div>
@@ -21,7 +21,7 @@
                   <!-- CIN -->
                   <div class="form-outline">
                     <input type="number" id="cin" class="form-control form-control-lg"formControlName="CIN" placeholder="CIN" />
-                    <label class="form-label" for="lastName">CIN</label>
+                    <label class="form-label" for="lastName">CIN: </label>
                   </div>
 
                 </div>
@@ -32,17 +32,17 @@
 
                   <div class="form-outline datepicker w-100">
                     <input type="email" class="form-control form-control-lg" id="email"placeholder="Enter your Email"formControlName="email" />
-                    <label for="email" class="form-label">Your Email</label>
+                    <label for="email" class="form-label">Your Email: </label>
                   </div>
                 </div>
                
-              <!-- password -->
+              <!--niveau -->
               <div class="row">
                 <div class="col-md-6 mb-4 ">
 
                   <div class="form-outline">
-                    <input type="password" id="password" class="form-control form-control-lg" formControlName="password" placeholder="Password" formControlName="password"/>
-                    <label class="form-label" for="password">Password</label>
+                    <input type="text" id="niveau" class="form-control form-control-lg" formControlName="niveau" placeholder="Niveau" />
+                    <label class="form-label" for="niveau">Niveau: </label>
                   </div>
 
                 </div>
@@ -57,23 +57,13 @@
 
                 </div>
               </div>
-               <!-- Admin -->
-               <div class="col-md-6 mb-4" hidden>
-
-                <h6 class="mb-2 pb-1">Admin: </h6>
-
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="admin" id="admin"
-                    value="option1"  formControlName="admin" />
-                  <label class="form-check-label" for="admin">Admin</label>
-                </div>
-              </div>
+              
             </div>
 
               
 
               <div class="mt-4 pt-2" style="text-align: center;">
-                <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                <input class="btn btn-primary btn-lg" type="submit" value="Send request" />
               </div>
 
             </form>
