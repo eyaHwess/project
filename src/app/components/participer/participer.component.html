@@ -1,1 +1,72 @@
-<p>participer works!</p>
+<div class="nav" style="height: 40px;"></div>
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-70">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5" style="text-align: center;font-weight: bold;">Join Us </h3>
+            <form >
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                <!-- Name Input -->
+                  <div class="form-outline">
+                    <input type="text" id="name" class="form-control form-control-lg" formControlName="name" placeholder="Enter your name"/>
+                    <label class="form-label" for="name">Your Name</label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <!-- CIN -->
+                  <div class="form-outline">
+                    <input type="number" id="cin" class="form-control form-control-lg"formControlName="CIN" placeholder="CIN" />
+                    <label class="form-label" for="lastName">CIN</label>
+                  </div>
+                </div>
+              </div>
+              <!-- email -->
+              <div class="row">
+                <div class="col-md-6 mb-4 d-flex align-items-center">
+                  <div class="form-outline datepicker w-100">
+                    <input type="email" class="form-control form-control-lg" id="email"placeholder="Enter your Email"formControlName="email" />
+                    <label for="email" class="form-label">Your Email</label>
+                  </div>
+                </div>
+               
+              <!-- password -->
+              <div class="row">
+                <div class="col-md-6 mb-4 ">
+                  <div class="form-outline">
+                    <input type="password" id="password" class="form-control form-control-lg" formControlName="password" placeholder="Password" formControlName="password"/>
+                    <label class="form-label" for="password">Password</label>
+                  </div>
+                </div>
+                
+                <!-- PhoneNumber -->
+                <div class="col-md-6 mb-4 " id="phone">
+                  <div class="form-outline">
+                    <input type="tel" id="phoneNumber" class="form-control form-control-lg"placeholder="Enter your phone number" formControlName="phoneNumber"/>
+                    <label class="form-label" for="phoneNumber">Phone Number</label>
+                  </div>
+                </div>
+              </div>
+               <!-- Admin -->
+               <div class="col-md-6 mb-4" hidden>
+                <h6 class="mb-2 pb-1">Admin: </h6>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="admin" id="admin"
+                    value="option1"  formControlName="admin" />
+                  <label class="form-check-label" for="admin">Admin</label>
+                </div>
+              </div>
+            </div>
+              
+              <div class="mt-4 pt-2" style="text-align: center;">
+                <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

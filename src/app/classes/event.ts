@@ -12,10 +12,6 @@ export class Event {
  public detail:string,
  public participants:Participant[],
  public requests:Participant[],
- ){
-    
- }
-
-
+ ){}
 
 }

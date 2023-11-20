@@ -5,10 +5,10 @@ import { LoginComponent } from '../components/login/login.component';
 
 export const authGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
-  const authService = inject(LoginComponent);
+  const authService = inject(AuthService);
   
-    if (authService.Admin) {
-      // User is authenticated, allow access
+  if (authService.isLoggedIn()) {
+    // User is authenticated, allow access
       return true;
     } else {
       // User is not authenticated, redirect to login page

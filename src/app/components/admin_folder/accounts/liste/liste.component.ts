@@ -1,10 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { EventService } from 'src/app/services/event.service';
+import { Event } from 'src/app/classes/event';
+import { Account } from 'src/app/classes/account';
+import { Participant } from 'src/app/classes/participant';
 
 @Component({
   selector: 'app-liste',
   templateUrl: './liste.component.html',
   styleUrls: ['./liste.component.css']
 })
-export class ListeComponent {
+export class ListeComponent implements OnInit {
+  constructor(private eventService:EventService){}
+events:Event[]=[];
+request:Participant[]=[];
+participants:Participant[]=[];
+ngOnInit(): void {
+  this.eventService.getEvents().subscribe(
+    data=>{
+      this.events=data
+    }
+  )
+}
+delete(id:number){
+  this.eventService.deleteEvent(id).subscribe()
+}
+modifier(idfE:number){
 
+}
 }

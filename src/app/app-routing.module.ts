@@ -15,7 +15,7 @@ import { ListeMembresComponent } from './components/admin_folder/liste-membres/l
 
 import { authGuard } from './guard/auth.guard';
 
-
+import { ParticiperComponent } from './components/participer/participer.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'home',component:HomeComponent},
@@ -25,11 +25,12 @@ const routes: Routes = [
   {path:'admin',component:AdminComponent,canActivate:[authGuard],
 children:[
   {path:'admin/event',component:EventComponent},
-  {path:'admin/modifier',component:ModifierComponent},
+  {path:'admin/modifier/:idfE',component:ModifierComponent},
   {path:'admin/ajouter',component:AjouterComponent},
   {path:'admin/listeAdmin',component:ListeAdminComponent},
-  {path:'admin/listeMenmbre',component:ListeMembresComponent}
-]},
+  {path:'admin/listeMembre',component:ListeMembresComponent}]},
+
+  {path:'participer',component:ParticiperComponent},
   {path:'**',component:ErrorComponent}
 ];
 
