@@ -25,16 +25,17 @@ export class LoginComponent {
     ngOnInit(){
       this.accountService.getAccounts().subscribe(
         data=>this.lesaccounts=data
-      )
-    }
-    onSubmit(): void {
-      if (this.loginForm.valid) {
-        const email = this.loginForm.value.email;
-        const password = this.loginForm.value.password;
-  
-        this.authservice.login(email, password);
+      )}
+      onSubmit(): void {
+        if (this.loginForm.valid) {
+          const email = this.loginForm.value.email;
+          const password = this.loginForm.value.password;
+    
+          this.authservice.login(email, password);
+        }
       }
-    }
+}
+  
     // onSubmit() {
       
     //   const { email, password } = this.loginForm.value;
@@ -71,6 +72,6 @@ export class LoginComponent {
     //   }
     // }
 //     
- }
+ 
 
 

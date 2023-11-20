@@ -15,6 +15,7 @@ import { ListeAdminComponent } from './components/admin_folder/liste-admin/liste
 import { ListeMembresComponent } from './components/admin_folder/liste-membres/liste-membres.component';
 
 import { authGuard } from './guard/auth.guard';
+import { ParticiperComponent } from './components/participer/participer.component';
 
 
 const routes: Routes = [
@@ -30,8 +31,8 @@ children:[
   {path:'admin/modifier',component:ModifierComponent},
   {path:'admin/ajouter',component:AjouterComponent},
   {path:'admin/listeAdmin',component:ListeAdminComponent},
-  {path:'admin/listeMenmbre',component:ListeMembresComponent}
-]},
+  {path:'admin/listeMenmbre',component:ListeMembresComponent}]},
+  {path:'participant',component:ParticiperComponent},
   {path:'**',component:ErrorComponent}
 ];
 

@@ -20,4 +20,7 @@ export class EventService {
   deleteEvent(id:number){
     return this.http.delete(URL+"/"+id)
   }
+  // public get lesParticipants(){
+  //   return this.productForm.get('pointsVente') as FormArray;
+  // }
 }
