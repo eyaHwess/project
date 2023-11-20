@@ -29,8 +29,8 @@ children:[
   {path:'admin/ajouter',component:AjouterComponent},
   {path:'admin/listeAdmin',component:ListeAdminComponent},
   {path:'admin/listeMembre',component:ListeMembresComponent}]},
-  {path:'participer',component:ParticiperComponent},
-  {path:'participant',component:ParticiperComponent},
+  {path:'participer/:id',component:ParticiperComponent},
+  
   {path:'**',component:ErrorComponent}
 ];
 

@@ -30,10 +30,15 @@ export class EventService {
     return this.http.post<Event>(participantUrl, participant);
   }
 
+  // getRequestsForEvent(eventId: number): Observable<Participant[]> {
+  //   const requestsUrl = `${URL}/${eventId}/Requests`;  // Assuming a route like /event/:eventId/participants
+  //   return this.http.get<Participant[]>(requestsUrl);
+  // }
   getRequestsForEvent(eventId: number): Observable<Participant[]> {
-    const requestsUrl = `${URL}/${eventId}/Requests`;  // Assuming a route like /event/:eventId/participants
+    const requestsUrl = `${URL}/events/${eventId}/requests`;  // Adjust the route based on your API structure
     return this.http.get<Participant[]>(requestsUrl);
   }
+  //Used in paticiper.ts
   addRequestsToEvent(eventId: number, Requests: Participant): Observable<Event> {
     const RequestsUrl = `${URL}/${eventId}/Requests`;  // Assuming a route like /event/:eventId/participants
     return this.http.post<Event>(RequestsUrl, Requests);
