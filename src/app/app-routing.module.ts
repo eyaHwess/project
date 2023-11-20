@@ -13,7 +13,7 @@ import { AjouterComponent } from './components/admin_folder/events/ajouter/ajout
 import { ListeAdminComponent } from './components/admin_folder/liste-admin/liste-admin.component';
 import { ListeMembresComponent } from './components/admin_folder/liste-membres/liste-membres.component';
 
-// import { authGuard } from './guard/auth.guard';
+import { authGuard } from './guard/auth.guard';
 
 
 const routes: Routes = [
@@ -23,12 +23,13 @@ const routes: Routes = [
   {path:'signup',component:SignupComponent},
   {path:'home/:id',component:SelectedEventComponent},
   {path:'admin',component:AdminComponent,
+  // canActivate:[authGuard],
 children:[
-  {path:'/admin/event',component:EventComponent},
-  {path:'/admin/modifier',component:ModifierComponent},
-  {path:'/admin/ajouter',component:AjouterComponent},
-  {path:'/admin/listeAdmin',component:ListeAdminComponent},
-  {path:'/admin/listeMembre',component:ListeMembresComponent}
+  {path:'admin/event',component:EventComponent},
+  {path:'admin/modifier',component:ModifierComponent},
+  {path:'admin/ajouter',component:AjouterComponent},
+  {path:'admin/listeAdmin',component:ListeAdminComponent},
+  {path:'admin/listeMembre',component:ListeMembresComponent}
 ]},
 
   {path:'**',component:ErrorComponent}

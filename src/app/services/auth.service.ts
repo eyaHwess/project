@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Account } from '../classes/account';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,9 +13,14 @@ export class AuthService {
   }
 
   // Method to simulate login
-  login(): void {
-    this.isAuthenticated = true;
+  login(account:Account,email:string,password:string): void {
+    if (account.email===email && account.password===password){
+      this.isAuthenticated = true;
+    }
+
+    
   }
+  
 
   // Method to simulate logout
   logout(): void {

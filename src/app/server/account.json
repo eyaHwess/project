@@ -1,13 +1,13 @@
 {
-    "account":[
-        {
-            "id":1,
-            "name":"Eya",
-            "CIN":1123232,
-            "email":"eya@gmail.com",
-            "admin":true,
-            "password":"eya121234",
-            "phoneNumber":23234345
-        }
-    ]
+  "account": [
+    {
+      "id": 1,
+      "name": "Eya",
+      "CIN": 1123232,
+      "email": "eya@gmail.com",
+      "admin": true,
+      "password": "eya121234",
+      "phoneNumber": 23234345
+    }
+  ]
 }
