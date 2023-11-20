@@ -9,13 +9,6 @@ const URL=" http://localhost:3000/account";
 export class AccountService {
 
   constructor( private http:HttpClient) { }
-  authenticate(email: string, password: string): Observable<Account> {
-    const params = new HttpParams()
-    .set('email', email)
-    .set('password', password);
-
-  return this.http.get<Account>(URL, { params: params });
-  }
   getAccounts():Observable<Account[]>{
     return this.http.get<Account[]>(`${URL}`);
   }

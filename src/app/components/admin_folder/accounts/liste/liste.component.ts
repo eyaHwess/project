@@ -12,8 +12,7 @@ import { Participant } from 'src/app/classes/participant';
 export class ListeComponent implements OnInit {
   constructor(private eventService:EventService){}
 events:Event[]=[];
-request:Participant[]=[];
-participants:Participant[]=[];
+participants:Account[]=[];
 ngOnInit(): void {
   this.eventService.getEvents().subscribe(
     data=>{
@@ -24,7 +23,5 @@ ngOnInit(): void {
 delete(id:number){
   this.eventService.deleteEvent(id).subscribe()
 }
-modifier(idfE:number){
 
-}
 }

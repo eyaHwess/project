@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Route, Router } from '@angular/Router';
+import { Robot } from 'src/app/classes/robot';
 
 @Component({
   selector: 'app-ajouter',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./ajouter.component.css']
 })
 export class AjouterComponent {
-
+  constructor( private router:Router){}
+  annuler(){
+    this.router.navigate(['/admin/event'])
+   }
 }
