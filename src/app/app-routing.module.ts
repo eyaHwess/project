@@ -22,16 +22,14 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'home/:id',component:SelectedEventComponent},
-  {path:'admin',component:AdminComponent,
-  // canActivate:[authGuard],
+  {path:'admin',component:AdminComponent,canActivate:[authGuard],
 children:[
   {path:'admin/event',component:EventComponent},
   {path:'admin/modifier',component:ModifierComponent},
   {path:'admin/ajouter',component:AjouterComponent},
   {path:'admin/listeAdmin',component:ListeAdminComponent},
-  {path:'admin/listeMembre',component:ListeMembresComponent}
+  {path:'admin/listeMenmbre',component:ListeMembresComponent}
 ]},
-
   {path:'**',component:ErrorComponent}
 ];
 

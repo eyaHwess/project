@@ -3,9 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { AccountService } from 'src/app/services/account.service';
 import { Router, RouterModule, Routes } from '@angular/Router';
-import { HttpClient } from '@angular/common/http';
+import { Account } from 'src/app/classes/account';
 import { AuthService } from 'src/app/services/auth.service';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,53 +14,63 @@ export class LoginComponent {
 
   constructor(private accountService: AccountService,private http:HttpClient,private authService:AuthService,
     private router: Router,
-    private formBuilder: FormBuilder){
+    private formBuilder: FormBuilder,
+    private authservice:AuthService){
       this.loginForm = this.formBuilder.group({
         email: ['', [Validators.required, Validators.email]],
         password: ['', [Validators.required]]
       });
     }
-    
-    onSubmit() {
-      const { email, password } = this.loginForm.value;
-      this.accountService.authenticate(email, password).subscribe(
-        (response) => {
-          if (response &&response.admin === true) {
-            // this.router.navigate(['/admin']);
-            
-            console.log("admin")
-            
-          } else {
-            // this.router.navigate(['/home']);
-            console.log("not admin")
-
-          }
-        },
-        (error) => {
-          console.error(error);
-        }
-      );
-
+    lesaccounts:Account[]=[];
+    ngOnInit(){
+      this.accountService.getAccounts().subscribe(
+        data=>this.lesaccounts=data
+      )
     }
-    // onSubmit(){
-    //   this.http.get<any>("http://localhost:3000/account").subscribe(
-    //     res=>{
-    //       const user=res.find((a:any)=>{
-    //         return a.email ===this.loginForm.value.email && a.email ===this.loginForm.value.email 
-    //       });
-    //       if (user && user.admin){
-    //         // localStorage.setItem('token', user.id);
+    onSubmit(): void {
+      if (this.loginForm.valid) {
+        const email = this.loginForm.value.email;
+        const password = this.loginForm.value.password;
+  
+        this.authservice.login(email, password);
+      }
+    }
+    // onSubmit() {
+      
+    //   const { email, password } = this.loginForm.value;
+    //   this.accountService.authenticate(email, password).subscribe(
+    //     (response) => {
+    //       if (response && response.admin === true) {
     //         this.router.navigate(['/admin']);
-    //       }
-    //       else{
-    //         // localStorage.setItem('token', user.id);
+            
+    //       } else {
     //         this.router.navigate(['/home']);
     //       }
-    //     },err=>{
-    //       alert("something went wrong")
+    //     },
+    //     (error) => {
+    //       console.error(error);
     //     }
-    //   )
+    //   );}
+    //Admin:boolean=false;
+    // onSubmit() {
+    //   const { email, password } = this.loginForm.value;
+    //   let accountExists = false;
+    //   let i:number=0;
+      
+
+    //   for (let i = 0; i < this.lesaccounts.length; i++) {
+    //     if (this.lesaccounts[i].email == email && this.lesaccounts[i].password == password) {
+    //       accountExists = true;
+    //       break; 
+    //   }
+    
+    //   if (accountExists) {
+    //     console.log("Account exists");
+    //   } else {
+    //     console.log("Account not found");
+    //   }
     // }
-} 
+//     
+ }
 
 
