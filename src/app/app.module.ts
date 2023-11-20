@@ -14,7 +14,6 @@ import { AdminComponent } from './components/admin_folder/admin/admin.component'
 import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
 
-import { SupprimerComponent } from './components/admin_folder/events/supprimer/supprimer.component';
 import { ModifierComponent } from './components/admin_folder/events/modifier/modifier.component';
 import { ListeComponent } from './components/admin_folder/accounts/liste/liste.component';
 import { RequestsComponent } from './components/admin_folder/accounts/requests/requests.component';
@@ -35,10 +34,7 @@ import { ListeAdminComponent } from './components/admin_folder/liste-admin/liste
     HeaderComponent,
     SignupComponent,
     AdminComponent,
-
     FooterComponent,
-
-    SupprimerComponent,
     ModifierComponent,
     ListeComponent,
     RequestsComponent,
