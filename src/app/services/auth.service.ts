@@ -6,7 +6,7 @@ import { Router } from '@angular/Router';
   providedIn: 'root'
 })
 export class AuthService {
-  private isAuthenticated = false;
+  private isAuthenticated= false;
 constructor(private http:HttpClient,private accountservice:AccountService,private router:Router){}
 
 login(email: string, password: string): void {
@@ -47,11 +47,7 @@ logout(): void {
   this.router.navigate(['/loginpage']);
 }
 }
-  // Method to check if the user is authenticated
-  // isLoggedIn(): boolean {
-  //   return this.isAuthenticated;
-  // }
-
+    
   // Method to simulate logout
   // logout(): void {
   //   this.isAuthenticated = false;

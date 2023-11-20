@@ -38,4 +38,7 @@ export class EventService {
     const RequestsUrl = `${URL}/${eventId}/Requests`;  // Assuming a route like /event/:eventId/participants
     return this.http.post<Event>(RequestsUrl, Requests);
   }
+  // public get lesParticipants(){
+  //   return this.productForm.get('pointsVente') as FormArray;
+  // }
 }
