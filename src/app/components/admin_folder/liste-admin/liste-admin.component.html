@@ -1,1 +1,21 @@
-<p>liste-admin works!</p>
+<table class="table">
+    <caption>List of Admins </caption>
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">CIN</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of liste">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.CIN}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.phoneNumber}}</td>
+      </tr>
+    </tbody>
+  </table>

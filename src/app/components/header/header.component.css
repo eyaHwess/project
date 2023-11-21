@@ -49,3 +49,19 @@ header{
     transition: 0.5s ease-in;
     
   }
+  #logout {
+    padding: 10px 20px;
+    background-color: rgb(206, 215, 239);
+    color: rgb(21, 18, 18)b0b;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    left: 20px;
+  }
+  #logout:hover{
+    color:rgb(197, 229, 238); 
+    transition: 0.5s ease-in;
+    
+  } 
+  

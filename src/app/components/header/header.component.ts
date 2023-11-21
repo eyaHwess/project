@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { AccountService } from 'src/app/services/account.service';
 @Component({
@@ -6,10 +6,15 @@ import { AccountService } from 'src/app/services/account.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 [x: string]: any;
   constructor(private authService:AuthService){}
+  btn!:boolean;
+  ngOnInit(): void {
+    this.btn=this.authService.isLoggedIn();
+  }
+  logout(): void {
+    this.authService.logout();
+  }
   
-  btn=this.authService.isLoggedIn();
-
 }

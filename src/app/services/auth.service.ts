@@ -44,7 +44,7 @@ isLoggedIn(): boolean {
 } 
 logout(): void {
   this.isAuthenticated = false;
-  this.router.navigate(['/loginpage']);
+  this.router.navigate(['/login']);
 }
 }
     
