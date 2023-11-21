@@ -1,8 +1,4 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <body><div class="area"></div><nav class="main-menu">
+<div class="area"></div><nav class="main-menu">
             <ul>
                 <li>
                     <a [routerLink]=''>
@@ -32,7 +28,7 @@
                     
                 </li>
                 <li class="has-subnav">
-                    <a href="#">
+                    <a routerLink="/admin/listeMembre">
                        <i class="fa fa-camera-retro fa-2x"></i>
                         <span class="nav-text">
                             Members List
@@ -41,7 +37,7 @@
                    
                 </li>
                 <li>
-                    <a href="#">
+                    <a routerLink="/admin/event">
                         <i class="fa fa-film fa-2x"></i>
                         <span class="nav-text">
                             Events
@@ -76,7 +72,7 @@
                     <a href="#">
                        <i class="fa fa-info fa-2x"></i>
                         <span class="nav-text">
-                          Accoount Settings
+                          Account Settings
                         </span>
                     </a>
                 </li>
@@ -84,7 +80,7 @@
 
             <ul class="logout">
                 <li>
-                   <a [routerLink]="" >
+                   <a (click)="logout()">
                          <i class="fa fa-power-off fa-2x"></i>
                         <span class="nav-text">
                             Logout
@@ -93,5 +89,3 @@
                 </li>  
             </ul>
         </nav>
-  </body>
-    </html>

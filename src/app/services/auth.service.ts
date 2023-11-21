@@ -28,15 +28,18 @@ login(email: string, password: string): void {
         if(authenticatedUser.admin){
           this.role="admin";
           console.log("Admin connected");
+          // this.admin=true;
           this.router.navigate(['admin']);
         }else{
           console.log("user connected");
+          // this.admin=false;
           this.router.navigate(['/home']);
         }
        
       } 
       else {
         this.isAuthenticated = false;
+        // this.admin=false;
         console.log('User not found');
     }
   },
@@ -50,9 +53,12 @@ login(email: string, password: string): void {
 isLoggedIn(): boolean {
   return this.isAuthenticated;
 } 
+// isAdmin():boolean{
+//   return this.admin;
+// }
 logout(): void {
   this.isAuthenticated = false;
-  this.router.navigate(['/loginpage']);
+  this.router.navigate(['/login']);
 }
 GetUserId(){
   return this.userId;

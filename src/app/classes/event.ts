@@ -1,5 +1,6 @@
-import { Participant } from "./participant";
+import { Account } from "./account";
 export class Event {
+    static nextId = 1;
     constructor(
         public id:number,
  public picture:string,
@@ -10,8 +11,8 @@ export class Event {
  public prize:string,
  public disponible:boolean,
  public detail:string,
- public participants:Participant[],
- public requests:Participant[],
- ){}
+ public participants:Account[],
+ public requests:Account[],
+ ){this.id = Account.nextId++;}
 
 }

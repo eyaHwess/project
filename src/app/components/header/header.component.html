@@ -5,8 +5,7 @@
         <a href="#services">Events</a>
         <a href="#contact">Contact</a>
 
-        <a routerLink='/login'   id="login" *ngIf="!btn">Login</a>
-        
-
+        <a routerLink='/login'  id="login" *ngIf="!btn">Login</a>
+        <a routerLink='/home'  id="logout" *ngIf="btn" (click)="logout()">LogOut</a>
     </nav>
 </header>
