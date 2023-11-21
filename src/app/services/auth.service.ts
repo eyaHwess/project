@@ -7,6 +7,10 @@ import { Router } from '@angular/Router';
 })
 export class AuthService {
   private isAuthenticated= false;
+  private userId: number =0;
+  private email:String='';
+  private name:String='';
+  private role:string='';
 constructor(private http:HttpClient,private accountservice:AccountService,private router:Router){}
 
 login(email: string, password: string): void {
@@ -17,8 +21,12 @@ login(email: string, password: string): void {
       );
       if (authenticatedUser) {
         this.isAuthenticated = true;
+        this.userId=authenticatedUser.id;
+        this.email=authenticatedUser.email;
+        this.name=authenticatedUser.name;
         //adminTest
         if(authenticatedUser.admin){
+          this.role="admin";
           console.log("Admin connected");
           this.router.navigate(['admin']);
         }else{
@@ -46,6 +54,18 @@ logout(): void {
   this.isAuthenticated = false;
   this.router.navigate(['/loginpage']);
 }
+GetUserId(){
+  return this.userId;
+}
+getEmail(){
+ return this.email;
+}
+getName(){
+  return this.name;
+ }
+ getRole(){
+  return this.role;
+ }
 }
     
   // Method to simulate logout

@@ -30,15 +30,7 @@ export class SignupComponent  {
     });
   }
   formvalues: Account[]=[];
-ngOnInit() {
-  // this.accountService.getAccounts()
-  // .subscribe( 
-  //   data => 
-  //   this.formvalues = data)
-  // }
-  ;
-  
-  }
+
   
   onSubmit(){
     if(this.signupForm.valid){
@@ -49,15 +41,7 @@ ngOnInit() {
       this.router.navigate(['/login']);
     }
   }
-  // onSubmit() {
-  //   if (this.signupForm.valid) {
-  //     const values = this.signupForm.value;
-  //     this.accountService.addAccount(values).subscribe(
-  //       data => console.log(data),
-  //       error => console.error('Error adding account', error)
-  //     );
-  //   }
-  // }
+ 
   
   
      }

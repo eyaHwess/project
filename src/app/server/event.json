@@ -1,33 +1,47 @@
 {
-    "event":[
+  "event": [
+    {
+      "id": 1,
+      "picture": "/assets/events/Event1.jpg",
+      "name": "Car Racing",
+      "nbMax": 20,
+      "date": "2024-01-01T10:00:00.000Z",
+      "dateL": "2023-12-24T00:00:00.000Z",
+      "prize": "1000DT",
+      "disponible": true,
+      "detail": "UniBots Speed Challenge débarque à Isetch le 1er janvier 2024 ! Vivez l'excitation alors que des robots conçus par des étudiants s'affrontent sur une piste personnalisée. Rejoignez-nous dès 10h pour du divertissement interactif, des démonstrations d'innovation et une compétition palpitante. Les inscriptions sont ouvertes jusqu'au 24 decembre 2023. Soyez là pour assister à l'avenir de la technologie en action!",
+      "participant": [
+        {}
+      ],
+      "Requests": [
+        {}
+      ],
+      "requests": [
         {
-            "id":1,
-            "picture":"/assets/events/Event1.jpg",
-            "name":"Car Racing",
-            "nbMax":20,
-            "date":"2024-01-01T10:00:00.000Z",
-            "dateL":"2023-12-24T00:00:00.000Z",
-            "prize":"1000DT",
-            "disponible":true,
-            "detail":"UniBots Speed Challenge débarque à Isetch le 1er janvier 2024 ! Vivez l'excitation alors que des robots conçus par des étudiants s'affrontent sur une piste personnalisée. Rejoignez-nous dès 10h pour du divertissement interactif, des démonstrations d'innovation et une compétition palpitante. Les inscriptions sont ouvertes jusqu'au 24 decembre 2023. Soyez là pour assister à l'avenir de la technologie en action!",
-            "participant":[{}],
-            "Requests":[{
-                
-            }]
-        },
-        {
-            "id":2,
-            "picture":"/assets/events/fnaf.jpg",
-            "name":"FNAF animatronics",
-            "nbMax":50,
-            "date":"2024-07-01T10:00:00.000Z",
-            "dateL":"2024-06-24T10:00:00.000Z",
-            "prize":"4000DT",
-            "disponible":false,
-            "detail":"coming soon...",
-            "participant":[{}],
-            "Requests":[{}]
+          "name": "malek",
+          "email": "malek@gmail.com",
+          "niveau": "22",
+          "phoneNumber": "22",
+          "memberId": 3
         }
-
-    ]
+      ]
+    },
+    {
+      "id": 2,
+      "picture": "/assets/events/fnaf.jpg",
+      "name": "FNAF animatronics",
+      "nbMax": 50,
+      "date": "2024-07-01T10:00:00.000Z",
+      "dateL": "2024-06-24T10:00:00.000Z",
+      "prize": "4000DT",
+      "disponible": false,
+      "detail": "coming soon...",
+      "participant": [
+        {}
+      ],
+      "Requests": [
+        {}
+      ]
+    }
+  ]
 }
