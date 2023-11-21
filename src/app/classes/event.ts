@@ -1,4 +1,5 @@
 import { Account } from "./account";
+import { Participant } from "./participant";
 export class Event {
     static nextId = 1;
     constructor(
@@ -12,7 +13,7 @@ export class Event {
  public disponible:boolean,
  public detail:string,
  public participants:Account[],
- public requests:Account[],
+ public requests:Participant[],
  ){this.id = Account.nextId++;}
 
 }

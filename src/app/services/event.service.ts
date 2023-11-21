@@ -44,12 +44,19 @@ export class EventService {
 
   addRequestsToEvent(eventId: number, participant: Participant): Observable<Event> {
     const RequestsUrl = `${URL}/${eventId}/Requests`;
+  
+    // Retrieve the current state of the event from the server
     return this.http.get<Event>(`${URL}/${eventId}`).pipe(
       switchMap((event: Event) => {
+        // Check if the 'requests' array is undefined, and initialize it if necessary
         if (!event.requests) {
           event.requests = [];
         }
+  
+        // Update the 'requests' property with the new participant
         event.requests.push(participant);
+  
+        // Send a PUT request to update the event on the server
         return this.http.put<Event>(`${URL}/${eventId}`, event);
       })
     );
