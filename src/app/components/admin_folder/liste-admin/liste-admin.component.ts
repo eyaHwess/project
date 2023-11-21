@@ -13,11 +13,7 @@ all:Account[]=[];
 constructor( private accountService:AccountService){
 }
   ngOnInit(): void {
-    this.accountService.getAccounts().subscribe(data=>{this.all=data})
-    for(let i=0;i<this.all.length;i++){
-      if (this.all[i].admin){
-        this.liste.push(this.all[i])
-    }
-  }
+    this.accountService.getAccounts().subscribe(data=>{      this.liste = data.filter(account => account.admin)})
+    
 }
 }
