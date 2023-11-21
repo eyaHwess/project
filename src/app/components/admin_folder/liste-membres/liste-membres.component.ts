@@ -9,8 +9,16 @@ import { AccountService } from 'src/app/services/account.service';
 })
 export class ListeMembresComponent implements OnInit {
   liste:Account[]=[];
+  all:Account[]=[];
+
   constructor(private accountService:AccountService){}
   ngOnInit(): void {
-    this.accountService.getAccounts().subscribe(data=>{this.liste=data})
+    this.accountService.getAccounts().subscribe(data=>{this.all=data})
+    for(let i=0;i<this.all.length;i++){
+      if (this.all[i].admin==false){
+        this.liste.push(this.all[i])
+    }
   }
+  }
+  
 }
