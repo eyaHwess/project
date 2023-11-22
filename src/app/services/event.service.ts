@@ -1,20 +1,23 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Event } from 'src/app/classes/event';
-import {Observable}from 'rxjs'
+import {Observable, switchMap, throwError}from 'rxjs'
 import { Participant } from '../classes/participant';
 import { Account } from '../classes/account';
-import { observableToBeFn } from 'rxjs/internal/testing/TestScheduler';
+import { AuthService } from './auth.service';
+import { AccountService } from './account.service';
 const URL=" http://localhost:3001/event";
 @Injectable({
   providedIn: 'root'
 })
 export class EventService {
 
-  constructor(private http:HttpClient) {}
+  constructor(private http:HttpClient,
+    private authService:AuthService,
+    private accountService:AccountService
+    ) {}
   getEvents():Observable<Event[]>{
     return this.http.get<Event[]>(URL) ; }
-    
     getEventById(id:number):Observable<Event>{
       return this.http.get<Event>(URL+"/"+id)
     }
@@ -33,24 +36,30 @@ export class EventService {
     return this.http.post<Event>(participantUrl, participant);
   }
 
-  patchEvent(id:number,data:any):Observable<Event>{
-    return this.http.patch<Event>(URL+"/"+id,data)
+ 
+  getRequestsForEvent(eventId: number): Observable<Participant[]> {
+    const requestsUrl = `${URL}/events/${eventId}/requests`; 
+    return this.http.get<Participant[]>(requestsUrl);
   }
 
-  // getRequestsForEvent(eventId: number): Observable<Participant[]> {
-  //   const requestsUrl = `${URL}/${eventId}/Requests`;  // Assuming a route like /event/:eventId/participants
-  //   return this.http.get<Participant[]>(requestsUrl);
-  // }
-  getRequestsForEvent(eventId: number): Observable<Account[]> {
-    const requestsUrl = `${URL}/events/${eventId}/requests`;  // Adjust the route based on your API structure
-    return this.http.get<Account[]>(requestsUrl);
+  addRequestsToEvent(eventId: number, participant: Participant): Observable<Event> {
+    const RequestsUrl = `${URL}/${eventId}/Requests`;
+  
+    // Retrieve the current state of the event from the server
+    return this.http.get<Event>(`${URL}/${eventId}`).pipe(
+      switchMap((event: Event) => {
+        // Check if the 'requests' array is undefined, and initialize it if necessary
+        if (!event.requests) {
+          event.requests = [];
+        }
+  
+        // Update the 'requests' property with the new participant
+        event.requests.push(participant);
+  
+        // Send a PUT request to update the event on the server
+        return this.http.put<Event>(`${URL}/${eventId}`, event);
+      })
+    );
   }
-  //Used in paticiper.ts
-  addRequestsToEvent(eventId: number, Requests: Account): Observable<Event> {
-    const RequestsUrl = `${URL}/${eventId}/Requests`;  // Assuming a route like /event/:eventId/participants
-    return this.http.post<Event>(RequestsUrl, Requests);
-  }
-  // public get lesParticipants(){
-  //   return this.productForm.get('pointsVente') as FormArray;
-  // }
+  
 }

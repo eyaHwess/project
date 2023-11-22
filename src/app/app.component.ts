@@ -7,7 +7,15 @@ import { AuthService } from './services/auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  private Admin!: string;
+  
   title = 'project';
   constructor(private authService:AuthService){}
-  isAdmin=this.authService.isAdmin
+  
+  ngOnInit(){
+    this.Admin = this.authService.getRole();
+  }
+  get admin(): string {
+    return this.Admin;
+  }
 }

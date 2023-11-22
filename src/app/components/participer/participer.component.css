@@ -1,23 +1,39 @@
 .gradient-custom {
     
-    background: url(/assets/backgroundtest.png) no-repeat;
+    background: url(/assets/test1.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    
+    height: 100vh;
+    display: flex;
+    align-items: center;
     
     }
-    
+    .body{
+        padding: 20px;
+    }
     .card-registration .select-input.form-control[readonly]:not([disabled]) {
     font-size: 1rem;
-    line-height: 2.15;
-    padding-left: .75em;
-    padding-right: .75em;
+    padding: 30px;
+    margin: 10px;
+    
     }
     .card-registration .select-arrow {
     top: 130px;
     }
-    #phone{
-        position: relative;
-        top: -106px;
-    }
+   
+    
+     
+      
+      
+      .btn-primary {
+        background-color: #254ebe;
+        border-color: #007bff;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+      }
+      
+   
