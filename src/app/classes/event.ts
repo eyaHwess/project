@@ -12,7 +12,7 @@ export class Event {
  public prize:string,
  public disponible:boolean,
  public detail:string,
- public participants:Account[],
+ public participants:Participant[],
  public requests:Participant[],
  ){this.id = Account.nextId++;}
 

@@ -35,7 +35,9 @@ export class EventService {
     const participantUrl = `${URL}/${eventId}/participants`;  // Assuming a route like /event/:eventId/participants
     return this.http.post<Event>(participantUrl, participant);
   }
-
+  patchEvent(id:number,data:any):Observable<Event>{
+    return this.http.patch<Event>(URL+"/"+id,data)
+  }
  
   getRequestsForEvent(eventId: number): Observable<Participant[]> {
     const requestsUrl = `${URL}/events/${eventId}/requests`; 

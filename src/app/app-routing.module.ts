@@ -24,18 +24,13 @@ const routes: Routes = [
   {path:'home/:id',component:SelectedEventComponent},
   {path:'admin',component:AdminComponent,canActivate:[authGuard],
 children:[
-    {path:'admin/event',component:EventComponent},
-    {path:'admin/modifier/:idfE',component:ModifierComponent},
-    {path:'admin/ajouter',component:AjouterComponent},
-    {path:'admin/listeAdmin',component:ListeAdminComponent},
-    {path:'admin/listeMembre',component:ListeMembresComponent}
-]},
-  {path:'participer/:idf',component:ParticiperComponent},
   {path:'event',component:EventComponent},
   {path:'modifier/:idfE',component:ModifierComponent},
   {path:'ajouter',component:AjouterComponent},
   {path:'listeAdmin',component:ListeAdminComponent},
-  {path:'listeMembre',component:ListeMembresComponent},
+  {path:'listeMembre',component:ListeMembresComponent}
+]},
+  {path:'participer/:idf',component:ParticiperComponent},
   //{path:'participer/:id',component:ParticiperComponent},
   
   {path:'**',component:ErrorComponent}
