@@ -1,4 +1,3 @@
 #container{
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  display: inline-block
 } 
