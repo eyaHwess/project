@@ -57,14 +57,15 @@ constructor(
 
   
   
-  onSubmit(){
-    if (this.modifyForm.valid) {
-      const updatedFields = this.modifyForm.value;
+  // onSubmit(){
+  //   if (this.modifyForm.valid) {
+  //     const updatedFields = this.modifyForm.value;
 
-      // Call the patchEvent method to update the event
-      this.eventService.patchEvent(this.idfE, updatedFields).subscribe(updatedEvent => {
-        console.log('Event updated:', updatedEvent);
-       this.router.navigate(['/admin/event']);
-     });
-  }
-  }}
+  //     // Call the patchEvent method to update the event
+  //     this.eventService.patchEvent(this.idfE, updatedFields).subscribe(updatedEvent => {
+  //       console.log('Event updated:', updatedEvent);
+  //      this.router.navigate(['/admin/event']);
+  //    });
+  // }
+  // }
+}

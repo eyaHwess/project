@@ -7,15 +7,18 @@ import { AuthService } from './services/auth.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  private Admin!: string;
-  
+  Admin: string = ''; // Initialize with an empty string or an appropriate default value
+
   title = 'project';
-  constructor(private authService:AuthService){}
-  
-  ngOnInit(){
+
+  constructor(private authService: AuthService) {}
+
+  ngOnInit() {
     this.Admin = this.authService.getRole();
   }
-  get admin(): string {
-    return this.Admin;
+
+  get isnotadmin(): boolean {
+    return this.Admin !== 'admin';
   }
 }
+
