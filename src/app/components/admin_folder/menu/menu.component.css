@@ -84,7 +84,7 @@ width:190px;
 }
 
 .main-menu>ul.logout {
-position:absolute;
+/* position:absolute; */
 left:0;
 bottom:0;
 }

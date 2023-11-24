@@ -10,17 +10,34 @@ import { EventService } from 'src/app/services/event.service';
   styleUrls: ['./requests.component.css']
 })
 export class RequestsComponent implements OnInit {
-  idfE:number=0;
-  request:Event[]=[];
+  
+  id:number=0;
+  requests:Participant[]=[];
   constructor(private activatedRoute:ActivatedRoute,
     private router:Router,
      private eventService:EventService){}
   ngOnInit(): void {
-    // this.idfE = this.activatedRoute.snapshot.params['id'];
-    // this.eventService.getEvents().subscribe(
-    //   data=>this.request=data;
-    //)
-    ;
+    this.id = this.activatedRoute.snapshot.params['id'];
+       this.eventService.getRequestsForEvent(this.id).subscribe(
+        data => {
+          console.log('data from requests', data);
+          this.requests = data;
+        },
+        error => {
+          console.error('Error fetching data:', error);
+        
+        }
+   )
+//    this.eventService.getRequestsForEvent(this.id).subscribe(
+//     data => {
+//       console.log('requests data',data);
+//       this.requests = data;},
+
+//     error=> console.error('Error fetching data ',error)
+     
+      
+//  );
+ 
     
   }
   

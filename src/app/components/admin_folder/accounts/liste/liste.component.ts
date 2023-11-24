@@ -11,15 +11,16 @@ import { Participant } from 'src/app/classes/participant';
 })
 export class ListeComponent implements OnInit {
   constructor(private eventService:EventService){}
-events:Event[]=[];
-participants:Account[]=[];
+event:Event[]=[];
+// participants:Account[]=[];
 ngOnInit(): void {
   this.eventService.getEvents().subscribe(
     data=>{
-      this.events=data
+      this.event=data
     }
   )
 }
+
 delete(id:number){
   this.eventService.deleteEvent(id).subscribe()
 }

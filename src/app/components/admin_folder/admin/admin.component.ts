@@ -11,16 +11,6 @@ import { Participant } from 'src/app/classes/participant';
 })
 
 export class AdminComponent {
-  event:Event[]=[];
-  requests:Participant[]=[];
-  participant:Participant[]=[];
-  constructor(private eventService:EventService,
-            
-    ){}
-    ngOnInit(){
-      this.eventService.getEvents().subscribe(
-        data=>this.event=data
-      )
-    }
+
 
 }

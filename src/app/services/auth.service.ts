@@ -31,7 +31,7 @@ login(email: string, password: string): void {
           console.log(this.name);
           console.log("Admin connected");
           // this.admin=true;
-          this.router.navigate(['admin']);
+          this.router.navigate(['/admin']);
         }else{
           console.log("user connected");
           // this.admin=false;

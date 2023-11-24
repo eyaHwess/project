@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Event } from 'src/app/classes/event';
-import {Observable, switchMap, throwError}from 'rxjs'
+import {Observable, catchError, switchMap, throwError}from 'rxjs'
 import { Participant } from '../classes/participant';
 import { Account } from '../classes/account';
 import { AuthService } from './auth.service';
@@ -36,14 +36,13 @@ export class EventService {
     return this.http.post<Event>(participantUrl, participant);
   }
 
- 
   getRequestsForEvent(eventId: number): Observable<Participant[]> {
-    const requestsUrl = `${URL}/events/${eventId}/requests`; 
-    return this.http.get<Participant[]>(requestsUrl);
+    const RequestsUrl = `${URL}/${eventId}/requests`;  
+    return this.http.get<Participant[]>(RequestsUrl);
   }
 
   addRequestsToEvent(eventId: number, participant: Participant): Observable<Event> {
-    const RequestsUrl = `${URL}/${eventId}/Requests`;
+    const RequestsUrl = `${URL}/${eventId}/requests`;
   
     // Retrieve the current state of the event from the server
     return this.http.get<Event>(`${URL}/${eventId}`).pipe(

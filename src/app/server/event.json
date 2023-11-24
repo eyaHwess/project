@@ -13,15 +13,19 @@
       "participant": [
         {}
       ],
-      "Requests": [
-        {}
-      ],
       "requests": [
         {
           "name": "malek",
           "email": "malek@gmail.com",
           "niveau": "22",
           "phoneNumber": "22",
+          "memberId": 3
+        },
+        {
+          "name": "malek",
+          "email": "malek@gmail.com",
+          "niveau": "22",
+          "phoneNumber": "1234",
           "memberId": 3
         }
       ]
@@ -39,7 +43,7 @@
       "participant": [
         {}
       ],
-      "Requests": [
+      "requests": [
         {}
       ]
     }
