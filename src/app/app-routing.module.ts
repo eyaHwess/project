@@ -24,6 +24,7 @@ const routes: Routes = [
   {path:'pwd',component:ChangePWDComponent},
   {path:'signup',component:SignupComponent},
   {path:'home/:id',component:SelectedEventComponent},
+  {path:'eventlist',component:EventComponent},
   {path:'admin',component:AdminComponent,canActivate:[authGuard],
 children:[
   {path:'event',component:EventComponent},
