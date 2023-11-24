@@ -19,7 +19,7 @@ font-size:20px;
   background: #e2e2e2;
   height: 100%;
   }
-.main-menu:hover,nav.main-menu.expanded {
+.main-menu,nav.main-menu {
 width:250px;
 overflow:visible;
 }
@@ -89,14 +89,12 @@ left:0;
 bottom:0;
 }
 
-.no-touch .scrollable.hover {
-overflow-y:hidden;
+.no-touch .scrollable {
+  overflow-y:auto;
+
+overflow-y:visible;
 }
 
-.no-touch .scrollable.hover:hover {
-overflow-y:auto;
-overflow:visible;
-}
 
 a:hover,a:focus {
 text-decoration:none;
