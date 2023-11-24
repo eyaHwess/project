@@ -7,12 +7,43 @@
     <nav class="navigation">
         <!-- Navigation links -->
         <a routerLink="/home">About us</a>
-        <a href="#main">About us</a>
         <a routerLink="/eventlist">Events</a>
         <a href="#contact">Contact</a>
 
         <!-- Login/Logout buttons -->
         <a routerLink='/login' id="login" *ngIf="!btn">Login</a>
-        <a routerLink='/home' id="logout" *ngIf="btn" (click)="logout()">LogOut</a>
+        <!-- <a  *ngIf="btn" [routerLink]="['/userprofile',id]" id="profile"> <i class="fa-solid fa-user"*ngIf="btn"></i> </a>
+        <a routerLink='/home' id="logout" *ngIf="btn" (click)="logout()">LogOut</a> -->
+       
+      
+        
     </nav>
+
+
+    <div class="navbar navbar-expand menunav" id="menunav" *ngIf="btn" >
+      <div class="container">
+        <button class="navbar-toggler menunav" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- <span class="navbar-toggler-icon"></span> -->
+        </button>
+    
+        <div class="collapse navbar-collapse menunav" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto menunav">
+            <!-- Dropdown Menu -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa-regular fa-user"></i>
+                <!-- <i class="bi bi-person-circle " id="pic"></i> -->
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item " [routerLink]="['/userprofile',id]" id="profile"><i class="fa-solid fa-user"></i>  Profile</a>
+                <a class="dropdown-item link" routerLink='/home' id=""(click)="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i>  Logout</a>
+              </div>
+            </li>
+    
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    
 </header>

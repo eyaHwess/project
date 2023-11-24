@@ -18,6 +18,7 @@ import { ParticiperComponent } from './components/participer/participer.componen
 import { ListeComponent } from './components/admin_folder/accounts/liste/liste.component';
 import { RequestsComponent } from './components/admin_folder/accounts/requests/requests.component';
 import { ChangePWDComponent } from './components/change-pwd/change-pwd.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 
 const routes: Routes = [
@@ -36,11 +37,9 @@ children:[
     {path:'listeAdmin',component:ListeAdminComponent},
     {path:'listeMembre',component:ListeMembresComponent},
     {path:'liste',component:ListeComponent},
-    {path:'requests/:id',component:RequestsComponent}
-]},
-  
+    {path:'requests/:id',component:RequestsComponent}]},
+  {path:'userprofile/:id',component:UserProfileComponent},
   {path:'participer/:id',component:ParticiperComponent},
-
   {path:'**',component:ErrorComponent}
 ]
  

@@ -7,7 +7,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 200px ;
+    padding: 15px 100px ;
 }
 .logo{
     text-decoration: none;
@@ -29,6 +29,11 @@ header{
     font-size: 1.1em;
     font-weight: 500;
     padding-left: 30px;
+}
+.navigation{
+  width: 500px;
+  position: absolute;
+  right: 0px;
 }
 .navigation a:hover{
     color:#601cfc; 
@@ -65,3 +70,55 @@ header{
     
   } 
   
+  /* dropdown */
+
+  #log{
+    float: left;
+  }
+ .menunav{
+  padding: 0;
+ }
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+
+
+.dropdown-item {
+ 
+  color: #254ebe;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 500;
+  padding-left: 30px;
+  transition: 0.5s ease-in; 
+}
+#navbarSupportedContent{
+  padding: 0;
+}
+.dropdown-item:hover {
+  background-color: #f8f9fa; /* Adjust hover background color */
+}
+
+.navbar-toggler {
+  padding: 5px; /* Adjust padding */
+}
+
+.nav-link {
+  font-size: 14px; /* Adjust font size */
+}
+
+.dropdown-menu {
+  min-width: 120px; /* Adjust minimum width */
+}
+
+.dropdown-item {
+  font-size: 14px; /* Adjust font size */
+}
+.navbar-nav .nav-link {
+  color: #000; /* Set the desired font color */
+}

@@ -23,6 +23,9 @@ import { AjouterComponent } from './components/admin_folder/events/ajouter/ajout
 import { ListeMembresComponent } from './components/admin_folder/liste-membres/liste-membres.component';
 import { ListeAdminComponent } from './components/admin_folder/liste-admin/liste-admin.component';
 import { ChangePWDComponent } from './components/change-pwd/change-pwd.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -44,13 +47,16 @@ import { ChangePWDComponent } from './components/change-pwd/change-pwd.component
     AjouterComponent,
     ListeMembresComponent,
     ListeAdminComponent,
-    ChangePWDComponent
+    ChangePWDComponent,
+    UserProfileComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent],
