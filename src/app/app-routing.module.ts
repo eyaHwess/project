@@ -30,14 +30,11 @@ children:[
   {path:'modifier/:idfE',component:ModifierComponent},
   {path:'ajouter',component:AjouterComponent},
   {path:'listeAdmin',component:ListeAdminComponent},
-  {path:'listeMembre',component:ListeMembresComponent}
-]},
-  {path:'participer/:idf',component:ParticiperComponent},
   //{path:'participer/:id',component:ParticiperComponent},
   
   {path:'**',component:ErrorComponent}
-];
-
+]}
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
