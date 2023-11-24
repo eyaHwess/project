@@ -13,6 +13,7 @@
             <th scope="col">Disponible</th>
             <th scope="col">Participant</th>
             <th scope="col">Requests</th>
+            <th scope="col">Options</th>
           </tr>
         </thead>
         <tbody>
@@ -27,13 +28,16 @@
                 {{item.participants}}
             </td>
             <td>
-            
                <a [routerLink]="['/admin/requests', item.id]" id="req">Requests</a>
-          
+            </td>
+            <td>
+              <a [routerLink]="['/admin/modifier',item.id]">Modify</a>
+              <button (click)="deleteEvent(item.id)">Delete</button>
             </td>
           </tr>
         </tbody>
       </table>
+      <button routerLink="/admin/ajouter">Add Event</button>
     
     </div>
     </div>

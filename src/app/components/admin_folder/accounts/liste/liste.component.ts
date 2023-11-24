@@ -21,7 +21,7 @@ ngOnInit(): void {
   )
 }
 
-delete(id:number){
+deleteEvent(id:number){
   this.eventService.deleteEvent(id).subscribe()
 }
 
