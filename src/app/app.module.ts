@@ -25,8 +25,8 @@ import { ListeAdminComponent } from './components/admin_folder/liste-admin/liste
 import { ChangePWDComponent } from './components/change-pwd/change-pwd.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
-import { AuthService } from './services/auth.service';
+import { AccountSettingsComponent } from './components/admin_folder/account-settings/account-settings.component';
+import { AccountComponent } from './components/admin_folder/accounts/account/account.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +50,8 @@ import { AuthService } from './services/auth.service';
     ListeAdminComponent,
     ChangePWDComponent,
     UserProfileComponent,
+    AccountSettingsComponent,
+    AccountComponent,
     
   ],
   imports: [

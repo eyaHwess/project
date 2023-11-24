@@ -19,6 +19,8 @@ import { ListeComponent } from './components/admin_folder/accounts/liste/liste.c
 import { RequestsComponent } from './components/admin_folder/accounts/requests/requests.component';
 import { ChangePWDComponent } from './components/change-pwd/change-pwd.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { AccountComponent } from './components/admin_folder/accounts/account/account.component';
+import { AccountSettingsComponent } from './components/admin_folder/account-settings/account-settings.component';
 
 
 const routes: Routes = [
@@ -31,6 +33,8 @@ const routes: Routes = [
   {path:'eventlist',component:EventComponent},
   {path:'admin',component:AdminComponent,canActivate:[authGuard],
 children:[
+  {path:'account',component:AccountComponent},
+  {path:'settings',component:AccountSettingsComponent},
     {path:'event',component:ListeComponent},
     {path:'modifier/:id',component:ModifierComponent},
     {path:'ajouter',component:AjouterComponent},
