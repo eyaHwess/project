@@ -26,12 +26,12 @@
               <h5 class="card-title">{{item.name}}</h5>
               <p class="card-text">Date: {{item.date| date}}.</p>
               <p class="card-text">Date Limite: {{item.dateL| date}}.</p>
-              <a [routerLink]="['/home',item.id]" class="btn btn-primary" *ngIf="item.disponible">Details</a>
+              <a [routerLink]="['/home',item.id]" class="btn_sel btn" *ngIf="item.disponible">Details</a>
               <p class="text-secondary" *ngIf="!item.disponible">Coming soon...</p>
             </div>
           </div>
         </div>
-        <button routerLink="/eventlist" class="btn btn-primary btn-lg" id="check">Check more <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        <button routerLink="/eventlist" class="" id="check">Check more <i class="fa fa-arrow-right" aria-hidden="true"></i>
         </button>
         
   </div>

@@ -40,9 +40,7 @@ export class LoginComponent {
     console.log('Is Valid Email:', isValid);
         return this.loginForm.get('email');
       }
-      isvalidEmail(){
-        return  this.Email?.valid && this.Email.touched;
-      }
+     
 }
   
     // onSubmit() {

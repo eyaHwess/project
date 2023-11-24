@@ -27,6 +27,14 @@ constructor(private router:Router,
       }
     )
   }
+  Redicrect(eventId:number):void{
+    if(this.authService.isLoggedIn()){
+      this.router.navigate(['/participer',eventId]);
+    }else{
+      alert("Please log in before registering.");
+      this.router.navigate(['/login']);
+    }
+  }
   // request(){
   //   const memberId = this.authService.GetUserId;
 

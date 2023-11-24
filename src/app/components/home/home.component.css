@@ -86,6 +86,7 @@ section{
     margin: 15px;
     transition: 0.7s ease;
     height: 530px;
+    /* text-align: center; */
 }
 .card:hover{
     transform: scale(1.1);
@@ -114,4 +115,20 @@ section{
     position: relative;
     top: 250px;
     height: 50px;
+    background-color: #b19de1;
+    border: 1px solid #b19de1;
+    padding:5px ;
+    border-radius: 5px;
+}
+.btn_sel{
+
+    background-color: #8066b9;
+    border: 1px solid #b19de1;
+    padding:10px ;
+    border-radius: 5px;
+    position: relative;
+    left: 90px;
+    top: 10px;
+    width: 100px;
+    color: #fff;
 }

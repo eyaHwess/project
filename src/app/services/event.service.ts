@@ -1,12 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Event } from 'src/app/classes/event';
-import {Observable, catchError, switchMap, throwError}from 'rxjs'
+import {Observable, throwError}from 'rxjs'
 import { Participant } from '../classes/participant';
 import { Account } from '../classes/account';
 import { AuthService } from './auth.service';
 import { AccountService } from './account.service';
 import { EventInterface } from '../event-interface';
+import { switchMap } from 'rxjs/internal/operators/switchMap';
+
+// import { Observable, switchMap, throwError } from 'rxjs'
 const URL=" http://localhost:3001/event";
 @Injectable({
   providedIn: 'root'

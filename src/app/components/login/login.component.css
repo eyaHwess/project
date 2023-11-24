@@ -25,7 +25,7 @@ height: 100%;
 }
 #form{
     background-color: #eee;
-    padding: 40px 40px;
+    padding: 30px 40px;
     border-radius: 10px;
     position: relative;
     top: 60px;
@@ -47,3 +47,12 @@ height: 100%;
     position: relative;
     right:50px ;
 }
+.error-message {
+    font-size: 10px; 
+    margin-top: 5px; 
+    position: relative;
+    top: -10px;
+  }
+  #email_in{
+    margin-bottom:0 ;
+  }

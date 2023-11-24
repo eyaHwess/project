@@ -14,19 +14,20 @@
   
             <!-- Email input-->
             <div class="form-outline mb-4">
-              <input type="email" id="email" autocomplete="off" class="form-control form-control-lg" formControlName="email"
-                placeholder="Enter a valid email address" />
               <label class="form-label" for="email">Email address</label>
+              <input type="email" id="email" autocomplete="off" id="email_in" class="form-control form-control-lg" formControlName="email"
+                placeholder="Enter a valid email address" />
+              
             </div>
-            <!-- <div *ngIf="Email?.valid && Email?.touched" class="alert alert-danger">
-              l'email n'est pas valid
-          </div>
-   -->
+            <div *ngIf="loginForm.get('email')?.hasError('email') && loginForm.get('email')?.touched" class="alert alert-danger error-message">
+              Please enter a valid email address.
+            </div>
             <!--Password input -->
             <div class="form-outline mb-3">
+              <label class="form-label" for="password">Password</label>
               <input type="password" id="password" class="form-control form-control-lg" formControlName="password" password
                 placeholder="Enter password" />
-              <label class="form-label" for="password">Password</label>
+             
             </div>
             <!-- <div *ngIf="" class="text-danger form-outline mb-3">
               Invalid email or password.

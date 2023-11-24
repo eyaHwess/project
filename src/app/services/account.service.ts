@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Observable, switchMap, throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { Account } from '../classes/account';
 import { observableToBeFn } from 'rxjs/internal/testing/TestScheduler';
 const URL=" http://localhost:3000/account";

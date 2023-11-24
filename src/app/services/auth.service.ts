@@ -40,6 +40,7 @@ login(email: string, password: string): void {
        
       } 
       else {
+        alert('Incorrect email or password.');
         this.isAuthenticated = false;
         // this.admin=false;
         console.log('User not found');
