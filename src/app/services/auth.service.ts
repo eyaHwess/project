@@ -11,7 +11,16 @@ export class AuthService {
   private email:String='';
   private name:String='';
   private role:string='';
-constructor(private http:HttpClient,private accountservice:AccountService,private router:Router){}
+constructor(private http:HttpClient,private accountservice:AccountService,private router:Router){
+  const isAuthenticatedValue = localStorage.getItem('isAuthenticated');
+
+  if (isAuthenticatedValue !== null) {
+    // 'isAuthenticated' is already set in localStorage
+    this.isAuthenticated = isAuthenticatedValue === 'true';
+  } else {
+    // 'isAuthenticated' is not set in localStorage, set it to 'false'
+    localStorage.setItem('isAuthenticated', 'false');
+  }}
 
 login(email: string, password: string): void {
   this.accountservice.getAccounts().subscribe(
@@ -21,9 +30,11 @@ login(email: string, password: string): void {
       );
       if (authenticatedUser) {
         this.isAuthenticated = true;
-        this.userId=authenticatedUser.id;
-        this.email=authenticatedUser.email;
-        this.name=authenticatedUser.name;
+        localStorage.setItem('isAuthenticated','true')
+        localStorage.setItem('userId', authenticatedUser.id.toString());
+        // this.userId=authenticatedUser.id;
+        // this.email=authenticatedUser.email;
+        // this.name=authenticatedUser.name;
         //adminTest
         if(authenticatedUser.admin){
           this.role="admin";
@@ -40,7 +51,10 @@ login(email: string, password: string): void {
        
       } 
       else {
+        alert('Incorrect email or password.');
         this.isAuthenticated = false;
+        localStorage.setItem('isAuthenticated','false')
+        localStorage.removeItem('userId');
         // this.admin=false;
         console.log('User not found');
     }
@@ -61,6 +75,7 @@ isLoggedIn(): boolean {
 
 logout(): void {
   this.isAuthenticated = false;
+  localStorage.clear()
   this.router.navigate(['/login']);
 }
 GetUserId(){
@@ -76,10 +91,3 @@ getName(){
   return this.role;
  }
 }
-    
-  // Method to simulate logout
-  // logout(): void {
-  //   this.isAuthenticated = false;
-  //   this.router.navigate(['/loginpage']);
-  // }  
-

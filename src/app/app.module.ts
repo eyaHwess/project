@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +23,7 @@ import { AjouterComponent } from './components/admin_folder/events/ajouter/ajout
 import { ListeMembresComponent } from './components/admin_folder/liste-membres/liste-membres.component';
 import { ListeAdminComponent } from './components/admin_folder/liste-admin/liste-admin.component';
 import { ChangePWDComponent } from './components/change-pwd/change-pwd.component';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
