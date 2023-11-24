@@ -18,14 +18,20 @@
                 placeholder="Enter a valid email address" />
               <label class="form-label" for="email">Email address</label>
             </div>
-  
+            <!-- <div *ngIf="Email?.valid && Email?.touched" class="alert alert-danger">
+              l'email n'est pas valid
+          </div>
+   -->
             <!--Password input -->
             <div class="form-outline mb-3">
               <input type="password" id="password" class="form-control form-control-lg" formControlName="password" password
                 placeholder="Enter password" />
               <label class="form-label" for="password">Password</label>
             </div>
-  
+            <!-- <div *ngIf="" class="text-danger form-outline mb-3">
+              Invalid email or password.
+            </div>
+   -->
             <div class="d-flex justify-content-between align-items-center">
               <!-- Checkbox -->
               <a routerLink="/pwd" class="text-body">Forgot / change password?</a>
@@ -35,7 +41,7 @@
               <input type="submit" class="btn btn-primary btn-lg"
                 style="padding-left: 2.5rem; padding-right: 2.5rem; " id="" value="Login">
               <p class="small fw-bold mt-2 pt-1 mb-0" id="signup">Don't have an account? 
-                <a routerLink="/signup"class="link-danger">Sign Up</a></p>
+                <a routerLink="/signup"class="link-danger" >Sign Up</a></p>
             </div>
   
           </form>

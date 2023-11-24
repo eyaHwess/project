@@ -35,6 +35,14 @@ export class LoginComponent {
           this.authservice.login(email, password);
         }
       }
+      public get Email(){
+        const isValid = this.Email?.valid && this.Email?.touched;
+    console.log('Is Valid Email:', isValid);
+        return this.loginForm.get('email');
+      }
+      isvalidEmail(){
+        return  this.Email?.valid && this.Email.touched;
+      }
 }
   
     // onSubmit() {

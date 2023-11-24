@@ -1,10 +1,21 @@
-<<<<<<< HEAD
-/* body{
-  display: grid;
-  padding-left:100px ;
-} */
-=======
+
 #container{
   display: inline-block
 } 
->>>>>>> 09281d106ea2028c05ba0618fc75ebb02793fd6e
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0; 
+  width: 200px; 
+ 
+ 
+}
+
+.router-container {
+  text-align: center;
+  margin-left: 230px;
+   padding:30px 35px;
+ 
+}
+
