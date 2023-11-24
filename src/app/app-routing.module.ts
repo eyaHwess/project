@@ -17,11 +17,14 @@ import { authGuard } from './guard/auth.guard';
 import { ParticiperComponent } from './components/participer/participer.component';
 import { ListeComponent } from './components/admin_folder/accounts/liste/liste.component';
 import { RequestsComponent } from './components/admin_folder/accounts/requests/requests.component';
+import { ChangePWDComponent } from './components/change-pwd/change-pwd.component';
+
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'home',component:HomeComponent},
   {path:'login',component:LoginComponent},
+  {path:'pwd',component:ChangePWDComponent},
   {path:'signup',component:SignupComponent},
   {path:'home/:id',component:SelectedEventComponent},
   {path:'admin',component:AdminComponent,canActivate:[authGuard],
@@ -34,16 +37,17 @@ children:[
     {path:'liste',component:ListeComponent},
     {path:'requests/:id',component:RequestsComponent}
 ]},
-  {path:'participer/:idf',component:ParticiperComponent},
   {path:'event',component:EventComponent},
   {path:'modifier/:idfE',component:ModifierComponent},
   {path:'ajouter',component:AjouterComponent},
   {path:'listeAdmin',component:ListeAdminComponent},
   {path:'listeMembre',component:ListeMembresComponent},
-  //{path:'participer/:id',component:ParticiperComponent},
-  
+  {path:'participer/:id',component:ParticiperComponent},
+
   {path:'**',component:ErrorComponent}
-];
+]
+ 
+
 
 
 @NgModule({

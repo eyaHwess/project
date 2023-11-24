@@ -13,7 +13,6 @@ import { Account } from 'src/app/classes/account';
 })
 export class SignupComponent  {
   signupForm: FormGroup;
-  private unsubscribe$: Subject<void> = new Subject<void>();
 
   constructor(
     private accountService: AccountService,
@@ -21,12 +20,12 @@ export class SignupComponent  {
     private formBuilder: FormBuilder
   ) {
     this.signupForm = this.formBuilder.group({
-      name: ['', [Validators.required]],
-      CIN: ['', [Validators.required]],
+      name: ['', [Validators.required ,Validators.pattern('^[a-zA-Z]+$')]],
+      CIN: ['', [Validators.required],Validators.pattern('^[0-9]+$'),Validators.maxLength(8)],
       email: ['', [Validators.required, Validators.email]], 
       admin: [false],
-      password: ['', [Validators.required]],
-      phoneNumber: [''],
+      password: ['', [Validators.required,Validators.minLength(8)]],
+      phoneNumber: ['',[Validators.required,Validators.minLength(8)]],
     });
   }
   formvalues: Account[]=[];

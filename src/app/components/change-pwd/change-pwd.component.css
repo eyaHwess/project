@@ -1,9 +1,9 @@
-/* #container{
-    /* zight: ;
+input.ng-valid{
+    border-left: 3px solid green;
 }
-.nav{
-    height:70px ;
-} */
+input.ng-invalid{
+    border-left: 3px solid red;
+}
 .gradient-custom {
     
     background: url(/assets/backgroundtest.png) no-repeat;
@@ -23,14 +23,10 @@
     .card-registration .select-arrow {
     top: 13px;
     }
-    #phone{
+    .form-outline{
         position: relative;
-        top: -106px;
+        
     }
-
-    input.ng-valid{
-        border-left: 3px solid green;
-    }
-    input.ng-invalid{
-        border-left: 3px solid red;
+    .container{
+        width: 800px;
     }

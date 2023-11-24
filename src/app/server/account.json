@@ -2,7 +2,7 @@
   "account": [
     {
       "name": "Eya",
-      "CIN": 1123232,
+      "CIN": 11180366,
       "email": "eya@gmail.com",
       "admin": true,
       "password": "eya121234",
@@ -11,7 +11,7 @@
     },
     {
       "name": "aram",
-      "CIN": 1111111111111,
+      "CIN": 11111111,
       "email": "aram@gmail.com",
       "admin": false,
       "password": "EEEEEEEEee",
@@ -20,7 +20,7 @@
     },
     {
       "name": "malek",
-      "CIN": 123456,
+      "CIN": 11122222,
       "email": "malek@gmail.com",
       "admin": false,
       "password": "EEEEEEE",

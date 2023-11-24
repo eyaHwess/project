@@ -40,7 +40,9 @@ export class EventService {
     const RequestsUrl = `${URL}/${eventId}/requests`;  
     return this.http.get<Participant[]>(RequestsUrl);
   }
-
+  patchEvent(id:number,data:any):Observable<Event>{
+    return this.http.patch<Event>(URL+"/"+id,data)
+  }
   addRequestsToEvent(eventId: number, participant: Participant): Observable<Event> {
     const RequestsUrl = `${URL}/${eventId}/requests`;
   

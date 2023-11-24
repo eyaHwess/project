@@ -7,7 +7,6 @@ import { AccountService } from 'src/app/services/account.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-[x: string]: any;
   constructor(private authService:AuthService){}
   btn!:boolean;
   ngOnInit(): void {

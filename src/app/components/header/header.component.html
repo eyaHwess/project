@@ -1,11 +1,17 @@
+
 <header>
+    <!-- Logo -->
     <a href="#" class="logo">RobotRise</a>
+
+    <!-- Navigation -->
     <nav class="navigation">
+        <!-- Navigation links -->
         <a href="#main">About us</a>
         <a href="#services">Events</a>
         <a href="#contact">Contact</a>
 
-        <a routerLink='/login'  id="login" *ngIf="!btn">Login</a>
-        <a routerLink='/home'  id="logout" *ngIf="btn" (click)="logout()">LogOut</a>
+        <!-- Login/Logout buttons -->
+        <a routerLink='/login' id="login" *ngIf="!btn">Login</a>
+        <a routerLink='/home' id="logout" *ngIf="btn" (click)="logout()">LogOut</a>
     </nav>
 </header>
