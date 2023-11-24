@@ -10,6 +10,7 @@ import { EventService } from 'src/app/services/event.service';
   styleUrls: ['./requests.component.css']
 })
 export class RequestsComponent implements OnInit {
+  
   id:number=0;
   requests:Participant[]=[];
   constructor(private activatedRoute:ActivatedRoute,
@@ -24,8 +25,21 @@ export class RequestsComponent implements OnInit {
         },
         error => {
           console.error('Error fetching data:', error);
+        
+        }
+   )
+//    this.eventService.getRequestsForEvent(this.id).subscribe(
+//     data => {
+//       console.log('requests data',data);
+//       this.requests = data;},
 
-        })}
+//     error=> console.error('Error fetching data ',error)
+     
+      
+//  );
+ 
+    
+  }
   
 
   // ngOnInit(): void {

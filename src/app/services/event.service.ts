@@ -36,24 +36,15 @@ export class EventService {
     return this.http.post<Event>(participantUrl, participant);
   }
 
- 
   getRequestsForEvent(eventId: number): Observable<Participant[]> {
-    const requestsUrl = `${URL}/${eventId}/requests`;
-    console.log('Requests URL:', requestsUrl);
-
-    return this.http.get<Participant[]>(requestsUrl)
-      .pipe(
-        catchError(error => {
-          console.error('Error fetching data:', error);
-          throw error;
-        })
-      );
+    const RequestsUrl = `${URL}/${eventId}/requests`;  
+    return this.http.get<Participant[]>(RequestsUrl);
   }
   patchEvent(id:number,data:any):Observable<Event>{
     return this.http.patch<Event>(URL+"/"+id,data)
   }
   addRequestsToEvent(eventId: number, participant: Participant): Observable<Event> {
-    const RequestsUrl = `${URL}/${eventId}/Requests`;
+    const RequestsUrl = `${URL}/${eventId}/requests`;
   
     // Retrieve the current state of the event from the server
     return this.http.get<Event>(`${URL}/${eventId}`).pipe(
