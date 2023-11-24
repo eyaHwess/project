@@ -6,6 +6,7 @@ import { Participant } from '../classes/participant';
 import { Account } from '../classes/account';
 import { AuthService } from './auth.service';
 import { AccountService } from './account.service';
+import { EventInterface } from '../event-interface';
 const URL=" http://localhost:3001/event";
 @Injectable({
   providedIn: 'root'
@@ -62,5 +63,9 @@ export class EventService {
       })
     );
   }
-  
+  searchEventsGetter(searchValue:String):Observable<EventInterface[]>{
+    return this.http.get<EventInterface[]>(
+      URL+"?name_like="+searchValue
+    )
+  }
 }

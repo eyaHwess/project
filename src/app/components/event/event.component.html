@@ -1,27 +1,23 @@
 <app-header></app-header>
-<!-- <div class="container">
+
+<div class="cards" id="services">
+  <div class="container form-outline">
     <form
       [formGroup]="searchForm"
       class="searchBar"
-      (ngSubmit)="onSearchSubmit()"
-    >
-      <input
-        type="text"
-        placeholder="Search..."
-        formControlName="searchValue"
-        class="searchBarInput"
-      />
-    </form>
-    <div class="articlesTable">
-      <div class="article" *ngFor="let article of articles">
-        {{ article.title }}
+      (ngSubmit)="onSearchSubmit()">
+      <div class="input-group rounded">
+        <input type="search" class="form-control rounded" placeholder="Search Event..." aria-label="Search" formControlName="searchValue" aria-describedby="search-addon" />
+        <span class="input-group-text border-0" id="search-addon">
+          <i class="fas fa-search"></i>
+        </span>
       </div>
-    </div>
-  </div> -->
-<div class="cards" id="services">
+    </form>
+  </div>
+  
     <h2 class="title">Events</h2>
     <div class="content">
-      <div *ngFor="let item of eventlist">
+      <div *ngFor="let item of events">
         <div class="card">
             <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
               <img [src]='item.picture' class="mx-auto d-block"/>
@@ -34,6 +30,6 @@
               <p class="text-secondary" *ngIf="!item.disponible">Coming soon...</p>
             </div>
           </div>
-        </div>
-        
-  </div>
+      </div>
+    </div>   
+</div>
