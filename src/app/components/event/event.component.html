@@ -1,1 +1,35 @@
 <app-header></app-header>
+
+<div class="cards" id="services">
+  <div class="container form-outline">
+    <form
+      [formGroup]="searchForm"
+      class="searchBar"
+      (ngSubmit)="onSearchSubmit()">
+      <div class="input-group rounded">
+        <input type="search" class="form-control rounded" placeholder="Search Event..." aria-label="Search" formControlName="searchValue" aria-describedby="search-addon" />
+        <span class="input-group-text border-0" id="search-addon">
+          <i class="fas fa-search"></i>
+        </span>
+      </div>
+    </form>
+  </div>
+  
+    <h2 class="title">Events</h2>
+    <div class="content">
+      <div *ngFor="let item of events">
+        <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img [src]='item.picture' class="mx-auto d-block"/>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{item.name}}</h5>
+              <p class="card-text">Date: {{item.date| date}}.</p>
+              <p class="card-text">Date Limite: {{item.dateL| date}}.</p>
+              <a [routerLink]="['/home',item.id]" class="btn btn-primary" *ngIf="item.disponible">Details</a>
+              <p class="text-secondary" *ngIf="!item.disponible">Coming soon...</p>
+            </div>
+          </div>
+      </div>
+    </div>   
+</div>
