@@ -2,21 +2,23 @@
   "account": [
     {
       "name": "Eya",
-      "CIN": "11180366",
+      "CIN": 1123232,
       "email": "eya@gmail.com",
       "admin": true,
       "password": "eya121234",
-      "phoneNumber": "23232232",
+      "phoneNumber": 23234345,
       "id": 1
     },
     {
-      "name": "aram",
+      "name": "aramm",
       "CIN": 1111111111111,
       "email": "aram@gmail.com",
       "admin": false,
       "password": "aram1234",
       "phoneNumber": "2222222",
-      "id": 2
+      "id": 2,
+      "cin": "1111111111111",
+      "phone": "2222222"
     },
     {
       "name": "malek",

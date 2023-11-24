@@ -23,11 +23,11 @@ constructor(private route:Router,
   ){
     this.modifierForm = this.fb.group({
       name: [this.authService.getName(), [Validators.required ,Validators.pattern('^[a-zA-Z]+$')]],
-      CIN: [this.authService.getcin(), [Validators.required, Validators.pattern('^[0-9]+$'), Validators.maxLength(8)],],
+      cin: [this.authService.getcin(), [Validators.required, Validators.pattern('^[0-9]+$'), Validators.maxLength(8)],],
       email: [this.authService.getEmail(), [Validators.required, Validators.email]], 
-      admin: [false],
+
       password: [this.authService.getpass(), [Validators.required,Validators.minLength(8)]],
-      phoneNumber: [this.authService.getphone(),[Validators.required,Validators.minLength(8)]],
+      phone: [this.authService.getphone(),[Validators.required,Validators.minLength(8)]],
     })
   }
   ngOnInit(){
@@ -35,7 +35,35 @@ constructor(private route:Router,
     this.accountService.getAccountById(this.id).subscribe(
       data=>this.UserAcc=data
     )
+
   }
 
+  onsave() {
+    
+  }
+  
+  onModif() {
+    if (this.modifierForm) {
 
-}
+      const formData = this.modifierForm.value;
+      console.log('Form data submitted:', formData);
+
+
+      this.accountService.patchAccount(this.id, formData).subscribe(
+        (result) => {
+          console.log('Changes saved successfully:', result);
+
+        },
+        (error) => {
+          console.error('Error saving changes:', error);
+ 
+        }
+      );
+    } else {
+
+      console.log('Form is not valid. Please check the fields.');
+    }
+  }
+  }
+  
+
