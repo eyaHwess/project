@@ -38,11 +38,7 @@ children:[
     {path:'liste',component:ListeComponent},
     {path:'requests/:id',component:RequestsComponent}
 ]},
-  {path:'event',component:EventComponent},
-  {path:'modifier/:idfE',component:ModifierComponent},
-  {path:'ajouter',component:AjouterComponent},
-  {path:'listeAdmin',component:ListeAdminComponent},
-  {path:'listeMembre',component:ListeMembresComponent},
+  
   {path:'participer/:id',component:ParticiperComponent},
 
   {path:'**',component:ErrorComponent}

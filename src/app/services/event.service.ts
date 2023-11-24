@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Event } from 'src/app/classes/event';
-import {Observable, catchError, switchMap, throwError}from 'rxjs'
+import {Observable, catchError, map, switchMap, throwError}from 'rxjs'
 import { Participant } from '../classes/participant';
 import { Account } from '../classes/account';
 import { AuthService } from './auth.service';
@@ -37,9 +37,12 @@ export class EventService {
     return this.http.post<Event>(participantUrl, participant);
   }
 
-  getRequestsForEvent(eventId: number): Observable<Participant[]> {
-    const RequestsUrl = `${URL}/${eventId}/requests`;  
-    return this.http.get<Participant[]>(RequestsUrl);
+  getRequestsForEvent(eventId: number): Observable<any> {
+    // const RequestsUrl = `${URL}/${eventId}/requests`;  
+    // return this.http.get<Participant[]>(RequestsUrl);
+    return this.http.get<any>(URL+"/"+eventId).pipe(
+      map(eventData=>eventData.requests ||[])
+    )
   }
   patchEvent(id:number,data:any):Observable<Event>{
     return this.http.patch<Event>(URL+"/"+id,data)
