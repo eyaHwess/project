@@ -5,8 +5,8 @@
       "picture": "/assets/events/Event1.jpg",
       "name": "Car Racing",
       "nbMax": 20,
-      "date": "2024-01-01T10:00",
-      "dateL": "2023-12-24T10:00",
+      "date": "2024-01-01T10:00:00.000Z",
+      "dateL": "2023-12-24T00:00:00.000Z",
       "prize": "1000DT",
       "disponible": true,
       "detail": "UniBots Speed Challenge débarque à Isetch le 1er janvier 2024 ! Vivez l'excitation alors que des robots conçus par des étudiants s'affrontent sur une piste personnalisée. Rejoignez-nous dès 10h pour du divertissement interactif, des démonstrations d'innovation et une compétition palpitante. Les inscriptions sont ouvertes jusqu'au 24 decembre 2023. Soyez là pour assister à l'avenir de la technologie en action!",
@@ -34,9 +34,9 @@
       "id": 2,
       "picture": "/assets/events/fnaf.jpg",
       "name": "FNAF animatronics",
-      "nbMax": 32,
-      "date": "2024-01-07T10:00",
-      "dateL": "2023-10-24T10:00",
+      "nbMax": 50,
+      "date": "2024-07-01T10:00:00.000Z",
+      "dateL": "2024-06-24T10:00:00.000Z",
       "prize": "4000DT",
       "disponible": false,
       "detail": "coming soon...",
@@ -44,7 +44,14 @@
         {}
       ],
       "requests": [
-        {}
+        {},
+        {
+          "name": "aram",
+          "email": "aram@gmail.com",
+          "niveau": "2eme",
+          "phoneNumber": "23368882",
+          "memberId": 2
+        }
       ]
     }
   ]
