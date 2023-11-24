@@ -48,7 +48,7 @@ login(email: string, password: string): void {
           console.log(this.name);
           console.log("Admin connected");
           // this.admin=true;
-          this.router.navigate(['/admin']);
+          this.router.navigate(['/admin/account']);
         }else{
           console.log("user connected");
           // this.admin=false;
@@ -68,16 +68,11 @@ login(email: string, password: string): void {
   (error)=>{
     console.error('Error fetching accounts' ,error);}
 )
- 
-  
 }
 //Retourner l'authentication
 isLoggedIn(): boolean {
   return this.isAuthenticated;
 } 
-// isAdmin():boolean{
-//   return this.admin;
-// }git push
 
 logout(): void {
   this.isAuthenticated = false;

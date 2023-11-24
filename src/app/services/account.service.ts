@@ -19,7 +19,9 @@ export class AccountService {
   getAccountById(accountId: number):Observable<Account>{
     return this.http.get<Account>(`${URL}/${accountId}`);
   }
-  
+  patchAccount(id:number,data:any):Observable<Account>{
+    return this.http.patch<Account>(URL+"/"+id,data)
+  }
   changePWD(email:string,pwd:any){
     //  return this.http.patch<Account>(URL+"/"+1,pwd);
     const accounts=this.getAccounts().subscribe(
