@@ -67,4 +67,5 @@ constructor(
        this.router.navigate(['/admin/event']);
      });
   }
-  }}
+  }
+}

@@ -27,6 +27,8 @@ login(email: string, password: string): void {
         //adminTest
         if(authenticatedUser.admin){
           this.role="admin";
+          console.log(this.role);
+          console.log(this.name);
           console.log("Admin connected");
           // this.admin=true;
           this.router.navigate(['admin']);
@@ -55,7 +57,8 @@ isLoggedIn(): boolean {
 } 
 // isAdmin():boolean{
 //   return this.admin;
-// }
+// }git push
+
 logout(): void {
   this.isAuthenticated = false;
   this.router.navigate(['/login']);

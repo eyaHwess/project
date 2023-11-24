@@ -1,4 +1,43 @@
 <div id="container">
 <app-menu></app-menu>
 <router-outlet></router-outlet>
+<div class="eventlist">
+    <h1>List Admins</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Date</th>
+        <th scope="col">Limit Date</th>
+        <th scope="col">Prize</th>
+        <th scope="col">Disponible</th>
+        <th scope="col">Participant</th>
+        <th scope="col">Requests</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of event">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.date}}</td>
+        <td>{{item.dateL}}</td>
+        <td>{{item.prize}}</td>
+        <td>{{item.disponible}}</td>
+        <td>
+            {{item.participants}}
+        </td>
+        <td>
+        <li *ngFor="let request of item.requests">
+            id:{{request.id}} <br>
+            name:{{request.name}} <br>
+            email:{{request.email}} <br>
+            phone:{{request.phoneNumber}} <br>
+        </li>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
 </div>
