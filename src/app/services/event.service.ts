@@ -40,7 +40,7 @@ export class EventService {
   }
  
   getRequestsForEvent(eventId: number): Observable<Participant[]> {
-    const requestsUrl = `${URL}/events/${eventId}/requests`; 
+    const requestsUrl = `${URL}/${eventId}/requests`; 
     return this.http.get<Participant[]>(requestsUrl);
   }
 

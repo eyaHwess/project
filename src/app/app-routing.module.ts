@@ -15,11 +15,13 @@ import { ListeMembresComponent } from './components/admin_folder/liste-membres/l
 
 import { authGuard } from './guard/auth.guard';
 import { ParticiperComponent } from './components/participer/participer.component';
+import { ChangePWDComponent } from './components/change-pwd/change-pwd.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'home',component:HomeComponent},
   {path:'login',component:LoginComponent},
+  {path:'pwd',component:ChangePWDComponent},
   {path:'signup',component:SignupComponent},
   {path:'home/:id',component:SelectedEventComponent},
   {path:'admin',component:AdminComponent,canActivate:[authGuard],

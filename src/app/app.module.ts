@@ -22,6 +22,7 @@ import { MenuComponent } from './components/admin_folder/menu/menu.component';
 import { AjouterComponent } from './components/admin_folder/events/ajouter/ajouter.component';
 import { ListeMembresComponent } from './components/admin_folder/liste-membres/liste-membres.component';
 import { ListeAdminComponent } from './components/admin_folder/liste-admin/liste-admin.component';
+import { ChangePWDComponent } from './components/change-pwd/change-pwd.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ListeAdminComponent } from './components/admin_folder/liste-admin/liste
     MenuComponent,
     AjouterComponent,
     ListeMembresComponent,
-    ListeAdminComponent
+    ListeAdminComponent,
+    ChangePWDComponent
   ],
   imports: [
     BrowserModule,

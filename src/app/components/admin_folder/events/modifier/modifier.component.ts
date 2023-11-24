@@ -20,7 +20,7 @@ constructor(
   private activatedRoute:ActivatedRoute
 ) {
   this.modifyForm = this.formBuilder.group({
-    name: [this.event.name, [Validators.required]],
+    name: [this.event.name, [Validators.required,Validators.pattern('^[A-Z][a-z]+$')]],
     nbMax: [this.event.nbMax, [Validators.required]],
     date: [this.event.date, [Validators.required]], 
     dateL: [this.event.dateL, [Validators.required]],
@@ -52,7 +52,7 @@ constructor(
     }
   }
   annuler(){
-    this.router.navigate(['/admin/event'])
+    this.router.navigate(['/admin/liste'])
    }
 
   

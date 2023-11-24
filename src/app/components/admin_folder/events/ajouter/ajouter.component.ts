@@ -10,6 +10,6 @@ import { Robot } from 'src/app/classes/robot';
 export class AjouterComponent {
   constructor( private router:Router){}
   annuler(){
-    this.router.navigate(['/admin/event'])
+    this.router.navigate(['/admin/liste'])
    }
 }
