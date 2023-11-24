@@ -20,17 +20,17 @@ constructor(
   private activatedRoute:ActivatedRoute
 ) {
   this.modifyForm = this.formBuilder.group({
-    name: [this.event.name, [Validators.required,Validators.pattern('^[A-Z][a-z]+$')]],
-    nbMax: [this.event.nbMax, [Validators.required]],
-    date: [this.event.date, [Validators.required]], 
-    dateL: [this.event.dateL, [Validators.required]],
-    prize: [this.event.prize,[Validators.required]],
-    disponible: [this.event.disponible,[Validators.required]],
-    detail: [this.event.detail,[Validators.required]],
+    name: ['', [Validators.required]],
+    nbMax: [, [Validators.required]],
+    date: ['', [Validators.required]], 
+    dateL: [, [Validators.required]],
+    prize: [,[Validators.required]],
+    disponible: [false,[Validators.required]],
+    detail: ['',[Validators.required]],
   });
 }
   ngOnInit() {
-    this.idfE=this.activatedRoute.snapshot.params['idfE'];
+    this.idfE=this.activatedRoute.snapshot.params['id'];
     this.eventService.getEventById(this.idfE).subscribe(data => {
       this.event = data;
       this.populateForm();
@@ -54,13 +54,11 @@ constructor(
   annuler(){
     this.router.navigate(['/admin/liste'])
    }
-
-  
   
   onSubmit(){
     if (this.modifyForm.valid) {
       const updatedFields = this.modifyForm.value;
-
+      updatedFields.disponible = updatedFields.disponible === 'true';
       // Call the patchEvent method to update the event
       this.eventService.patchEvent(this.idfE, updatedFields).subscribe(updatedEvent => {
         console.log('Event updated:', updatedEvent);
