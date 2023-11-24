@@ -4,6 +4,10 @@
 .nav{
     height:70px ;
 } */
+.form{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
 .gradient-custom {
     
     background: url(/assets/backgroundtest.png) no-repeat;
@@ -34,3 +38,4 @@
     input.ng-invalid{
         border-left: 3px solid red;
     }
+   

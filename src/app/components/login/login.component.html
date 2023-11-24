@@ -17,16 +17,19 @@
               <label class="form-label" for="email">Email address</label>
               <input type="email" id="email" autocomplete="off" id="email_in" class="form-control form-control-lg" formControlName="email"
                 placeholder="Enter a valid email address" />
-              
+                <div *ngIf="loginForm.get('email')?.hasError('email') && loginForm.get('email')?.touched" class="text-danger">
+                  Please enter a valid email address.
+                </div> 
             </div>
-            <div *ngIf="loginForm.get('email')?.hasError('email') && loginForm.get('email')?.touched" class="alert alert-danger error-message">
-              Please enter a valid email address.
-            </div>
+           
             <!--Password input -->
             <div class="form-outline mb-3">
               <label class="form-label" for="password">Password</label>
               <input type="password" id="password" class="form-control form-control-lg" formControlName="password" password
                 placeholder="Enter password" />
+                <div *ngIf="loginForm.get('password')?.hasError('required') && loginForm.get('password')?.touched" class="text-danger">
+                  Password is required.
+                </div>
              
             </div>
             <!-- <div *ngIf="" class="text-danger form-outline mb-3">

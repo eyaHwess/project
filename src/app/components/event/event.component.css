@@ -1,71 +1,14 @@
-section{
-    padding: 100px 160px;
-}
- .intro{
-    padding-top: 130px;
-    width:500px
-} 
-.main{
-    width:100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background: url(/assets/back.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-.main h2{
-    color: #CCCCCC;
-    font-size: 1.4em;
-    font-weight: 500;
-}
-.main h2 span{
-    display: inline-block;
-    margin-top: 10px;
-    color:rgb(46, 29, 232);
-    font-size:2em ;
-    font-weight: 600;
-}
-.main h3{
-    color: #CCCCCC;
-    font-size: 1.1em;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-.main-btn{
-    color: #fff;
-    text-decoration: none;
-    background-color: #0e6ee3;
-    font-size: 1.1em;
-    font-weight: 600; 
-    /* inlineblock so we can do a margin and padding property */
-    display: inline-block;
-    padding: 0.8375em 2.1875em;
-    letter-spacing: 1px;
-    border-radius: 15px;
-    margin-bottom:40px ;
-    transition: 0.7s ease;
-}
-.main-btn:hover{
-    background-color: #601cfc;
-    transform: scale(1.1);
-}
-.social-icons a{
-    color: #fff;
-    font-size: 1.7em;
-    padding-right: 30px;
-}
+
 /* Services */
 
 #services{
     height: 800px;
-    padding-top: 100px;
+    background-color: rgb(253, 248, 253);
 }
 .title{
-    padding-top: 60px;
+    /* padding-top: 60px; */
+    position: relative;
+    top: 130px;
     display: flex;
     justify-content: center;
     color: #254ebe;
@@ -78,6 +21,9 @@ section{
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    /* margin: 30px; */
+    position: relative;
+    top: 100px;
 }
 
 .card{
@@ -87,6 +33,7 @@ section{
     margin: 15px;
     transition: 0.7s ease;
     height: 530px;
+    margin: 30px;
 }
 .card:hover{
     transform: scale(1.1);
@@ -103,7 +50,7 @@ section{
     color: #0e6ee3;
     font-size: 1.2em;
     font-weight: 700;
-    margin: 10px;
+    
 }
 .card img{
     height: 300px;
@@ -115,4 +62,21 @@ section{
     position: relative;
     top: 250px;
     height: 50px;
+}
+.btndetail{
+    text-decoration: none;
+    background-color: #753df0;
+    border: 1px solid #b19de1;
+    padding:10px ;
+    border-radius: 5px;
+    position: relative;
+    left: 90px;
+    top: 10px;
+    width: 100px;
+    color: #fff;
+    
+}
+#search{
+    position: relative;
+    top: 100px;
 }

@@ -1,3 +1,4 @@
+@import "https://unpkg.com/open-props";
 section{
     padding: 100px 160px;
 }
@@ -61,10 +62,11 @@ section{
 /* Services */
 
 #services{
-    height: 800px;
+    height: 850px;
+    padding-bottom: 20px;
 }
 .title{
-    padding-top: 60px;
+    padding-top: 50px;
     display: flex;
     justify-content: center;
     color: #254ebe;
@@ -77,13 +79,15 @@ section{
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-bottom: 50px;
+    padding-right: 0px; 
 }
 
 .card{
     background-color: #fff;
     width: 21.25em;
     box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
-    margin: 15px;
+    margin: 10px;
     transition: 0.7s ease;
     height: 530px;
     /* text-align: center; */
@@ -103,7 +107,7 @@ section{
     color: #0e6ee3;
     font-size: 1.2em;
     font-weight: 700;
-    margin: 10px;
+    margin: 5px;
 }
 .card img{
     height: 300px;
@@ -115,14 +119,20 @@ section{
     position: relative;
     top: 250px;
     height: 50px;
-    background-color: #b19de1;
+    background-color: #753df0;
     border: 1px solid #b19de1;
-    padding:5px ;
+    padding:15px ;
     border-radius: 5px;
+    margin-left: 20px;
+    color: #fff;
+}
+#check:hover{
+    box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #3a158a;
+    transform: translateY(-2px);
 }
 .btn_sel{
 
-    background-color: #8066b9;
+    background-color: #753df0;
     border: 1px solid #b19de1;
     padding:10px ;
     border-radius: 5px;
@@ -131,4 +141,12 @@ section{
     top: 10px;
     width: 100px;
     color: #fff;
+    
+    
+}
+.btn_sel:hover{
+    
+        box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #3a158a;
+        transform: translateY(-2px);
+    
 }
