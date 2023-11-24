@@ -27,6 +27,7 @@ constructor(
     prize: [,[Validators.required]],
     disponible: [false,[Validators.required]],
     detail: ['',[Validators.required]],
+    picture: [''],
   });
 }
   ngOnInit() {
@@ -36,6 +37,17 @@ constructor(
       this.populateForm();
     });
   }
+// In your component class
+onFileSelected(event: any): void {
+  const file = event.target.files[0];
+  if (file) {
+    // You can add additional logic here, like checking file types or sizes.
+    // Upload the file to the server (e.g., using Angular HttpClient) and get the path.
+    // For simplicity, let's assume the server returns the path.
+    const imagePath = '/assets/events/' + file.name;
+    this.modifyForm.patchValue({ picture: imagePath });
+  }
+}
 
   populateForm(): void {
     if (this.event) {
@@ -48,6 +60,7 @@ constructor(
         prize: this.event.prize,
         disponible: this.event.disponible,
         detail: this.event.detail,
+        picture: this.event.picture
       });
     }
   }
@@ -58,6 +71,7 @@ constructor(
   onSubmit(){
     if (this.modifyForm.valid) {
       const updatedFields = this.modifyForm.value;
+
       updatedFields.disponible = updatedFields.disponible === 'true';
       // Call the patchEvent method to update the event
       this.eventService.patchEvent(this.idfE, updatedFields).subscribe(updatedEvent => {

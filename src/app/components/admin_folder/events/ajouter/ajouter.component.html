@@ -5,9 +5,15 @@
       <div class="col-12 col-lg-9 col-xl-7">
         <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
           <div class="card-body p-4 p-md-5">
-            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5" style="text-align: center;font-weight: bold;">Sign Up </h3>
-            <form >
-
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5" style="text-align: center;font-weight: bold;">Add Event</h3>
+            <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+              <div class="col-md-12 mb-4">
+                <!-- Picture Upload -->
+                <div class="form-outline">
+                  <input type="file" id="picture" class="form-control" (change)="onFileSelected($event)" />
+                  <label class="form-label" for="picture">Upload Picture</label>
+                </div>
+              </div>
               <div class="row">
                 <div class="col-md-7 mb-4">
                 <!-- Name Input -->
@@ -26,12 +32,12 @@
 
                 </div>
               </div>
-              <!-- email -->
+              <!-- date -->
               <div class="row">
                 <div class="col-md-6 mb-4 d-flex align-items-center">
 
                   <div class="form-outline datepicker w-100">
-                    <input type="date" class="form-control form-control-lg" id="date" formControlName="date" />
+                    <input type="datetime-local" class="form-control form-control-lg" id="date" formControlName="date" />
                     <label for="date" class="form-label">Event date</label>
                   </div>
                 </div>
@@ -41,8 +47,8 @@
                 <div class="col-md-6 mb-4 ">
 
                   <div class="form-outline">
-                    <input type="date" id="dateL" class="form-control form-control-lg" formControlName="dateL" />
-                    <label class="form-label" for="dateL">pParticipation Request deadline: </label>
+                    <input type="datetime-local" id="dateL" class="form-control form-control-lg" formControlName="dateL" />
+                    <label class="form-label" for="dateL">Participation Request deadline: </label>
                   </div>
 
                 </div>
@@ -74,7 +80,7 @@
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="radio" name="disponible" id="disponible"
                     value="true"  formControlName="disponible" />
-                  <label class="form-check-label" for="disponible">true</label>
+                  <label class="form-check-label" for="disponible">true</label><br>
                   <input class="form-check-input" type="radio" name="disponible" id="disponible"
                     value="false"  formControlName="disponible" />
                   <label class="form-check-label" for="disponible">false</label>
