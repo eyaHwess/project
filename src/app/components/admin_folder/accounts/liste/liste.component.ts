@@ -3,6 +3,7 @@ import { EventService } from 'src/app/services/event.service';
 import { Event } from 'src/app/classes/event';
 import { Account } from 'src/app/classes/account';
 import { Participant } from 'src/app/classes/participant';
+import { Route, Router } from '@angular/Router';
 
 @Component({
   selector: 'app-liste',
@@ -10,7 +11,7 @@ import { Participant } from 'src/app/classes/participant';
   styleUrls: ['./liste.component.css']
 })
 export class ListeComponent implements OnInit {
-  constructor(private eventService:EventService){}
+  constructor(private eventService:EventService,private router:Router){}
 event:Event[]=[];
 // participants:Account[]=[];
 ngOnInit(): void {
@@ -23,6 +24,7 @@ ngOnInit(): void {
 
 deleteEvent(id:number){
   this.eventService.deleteEvent(id).subscribe()
+  window.location.reload()
 }
 
 }

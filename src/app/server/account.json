@@ -11,7 +11,7 @@
     },
     {
       "name": "aram",
-      "CIN": 1111111111111,
+      "CIN": "11111111",
       "email": "aram@gmail.com",
       "admin": false,
       "password": "aram1234",
@@ -20,12 +20,21 @@
     },
     {
       "name": "malek",
-      "CIN": 123456,
+      "CIN": "22222222",
       "email": "malek@gmail.com",
       "admin": false,
       "password": "Eyaaaaaa4",
       "phoneNumber": "2222222",
       "id": 3
+    },
+    {
+      "name": "emna",
+      "CIN": "11111111",
+      "email": "emna@gmail.com",
+      "admin": false,
+      "password": "eya121234",
+      "phoneNumber": "23232232",
+      "id": 4
     }
   ]
 }

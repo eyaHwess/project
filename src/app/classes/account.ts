@@ -3,7 +3,7 @@ export class Account {
   constructor(
     public id: number,
     public name: string,
-    public CIN: number,
+    public CIN: string,
     public email: string,
     public admin: boolean,
     public password: string,

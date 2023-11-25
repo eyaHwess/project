@@ -18,7 +18,7 @@ export class AccountSettingsComponent implements OnInit{
     private formBuilder:FormBuilder,private router:Router){
     this.modifyForm = this.formBuilder.group({
       name: ['', [Validators.required]],
-      email: [, [Validators.required,Validators.email]],
+      email: ['', [Validators.required,Validators.email]],
       CIN: ['', [Validators.required]], 
       phoneNumber: [, [Validators.required]],
       password: [,[Validators.required]]

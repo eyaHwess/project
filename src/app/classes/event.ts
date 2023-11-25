@@ -1,4 +1,3 @@
-import { Account } from "./account";
 import { Participant } from "./participant";
 export class Event {
     static nextId = 1;
@@ -12,9 +11,9 @@ export class Event {
         public prize:string,
         public disponible:boolean,
         public detail:string,
-        public participants:Account[],
+        public participants:Participant[],
         public requests:Participant[],
         )
- {this.id = Account.nextId++;}
+ {this.id = Event.nextId++;}
 
 }
