@@ -1,11 +1,15 @@
 
 export class Participant {
-    constructor(
-        public id:number,
-        public name:String,
-        public email:String,
-        public phoneNumber:Number
-    ){}
-
+    static nextId = 1;
     
+
+    constructor(
+        public id: number,
+        public name: string,
+        public email: string,
+        public phoneNumber: number
+    ) {
+        this.id = Participant.nextId++;
+    }
+ 
 }

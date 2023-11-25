@@ -5,8 +5,8 @@
       "picture": "/assets/events/Event1.jpg",
       "name": "Car Racing",
       "nbMax": 20,
-      "date": "2024-01-01T10:00:00.000Z",
-      "dateL": "2023-12-24T00:00:00.000Z",
+      "date": "2024-01-01T10:00",
+      "dateL": "2023-12-24T10:00",
       "prize": "1000DT",
       "disponible": true,
       "detail": "UniBots Speed Challenge débarque à Isetch le 1er janvier 2024 ! Vivez l'excitation alors que des robots conçus par des étudiants s'affrontent sur une piste personnalisée. Rejoignez-nous dès 10h pour du divertissement interactif, des démonstrations d'innovation et une compétition palpitante. Les inscriptions sont ouvertes jusqu'au 24 decembre 2023. Soyez là pour assister à l'avenir de la technologie en action!",
@@ -15,6 +15,7 @@
       ],
       "requests": [
         {
+          "id": 1,
           "name": "malek",
           "email": "malek@gmail.com",
           "niveau": "22",
@@ -22,11 +23,41 @@
           "memberId": 3
         },
         {
+          "id": 2,
           "name": "malek",
           "email": "malek@gmail.com",
           "niveau": "22",
           "phoneNumber": "1234",
           "memberId": 3
+        },
+        {
+          "id": 3,
+          "name": "aram",
+          "email": "aram@gmail.com",
+          "niveau": "zs",
+          "phoneNumber": "2222222",
+          "memberId": 2
+        },
+        {
+          "id": 4,
+          "name": "aram",
+          "email": "aram@gmail.com",
+          "niveau": "d",
+          "phoneNumber": "2222222"
+        },
+        {
+          "id": 5,
+          "name": "aram",
+          "email": "aram@gmail.com",
+          "niveau": "55",
+          "phoneNumber": "2222222"
+        },
+        {
+          "id": 6,
+          "name": "emna",
+          "email": "abdella@gmail.com",
+          "niveau": "22",
+          "phoneNumber": "23368882"
         }
       ]
     },
@@ -50,6 +81,20 @@
           "email": "aram@gmail.com",
           "niveau": "2eme",
           "phoneNumber": "23368882",
+          "memberId": 2
+        },
+        {
+          "name": "aram",
+          "email": "aram@gmail.com",
+          "niveau": "6",
+          "phoneNumber": "2222222",
+          "memberId": 2
+        },
+        {
+          "name": "aram",
+          "email": "aram@gmail.com",
+          "niveau": "",
+          "phoneNumber": "2222222",
           "memberId": 2
         }
       ]

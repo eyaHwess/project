@@ -14,7 +14,10 @@ export class ParticiperComponent {
 
   participerForm!: FormGroup;
   userId: number = parseInt(localStorage.getItem('userId') || '0', 10);
-  name:String='';
+  
+  eventId!:number;
+  part!:Participant;
+
   constructor(
     private fb:FormBuilder,
     private eventService:EventService,
@@ -24,7 +27,7 @@ export class ParticiperComponent {
   ){}
   ngOnInit(){
     // this.name=localStorage.getItem('name');
-    // this.=this.activatedRoute.snapshot.params['idf'];
+    this.eventId=this.activatedRoute.snapshot.params['id'];
     this.participerForm=this.fb.group(
       {
         name:[this.authservice.getName()],
@@ -40,14 +43,15 @@ export class ParticiperComponent {
     
     const formValues = this.participerForm.value;
     const memberId = this.userId;
-
+    
     if (memberId) {
       
-      const participant = { ...formValues, memberId };
+      const participant = { ...formValues };
 
       
-      this.eventService.addRequestsToEvent(this.userId, participant).subscribe(
+      this.eventService.addRequestsToEvent(this.eventId, participant).subscribe(
         (data) => {
+          
           alert("Request added successfully");
           console.log('Request added successfully:', data);
         },

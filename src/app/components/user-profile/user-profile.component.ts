@@ -12,9 +12,18 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class UserProfileComponent {
   id!:number;
-  UserAcc!:Account;
+  UserAcc:Account={
+    id: 0,
+    name: '',
+    CIN: '',
+    email: '',
+    admin: false,
+    password: '',
+    phoneNumber: ''
+  };
   modifierForm!:FormGroup;
   modif:boolean= true;
+  isEnable:boolean=false;
 constructor(private route:Router,
   private activatedRoute: ActivatedRoute,
   private accountService:AccountService,
@@ -35,23 +44,28 @@ constructor(private route:Router,
     this.accountService.getAccountById(this.id).subscribe(
       data=>this.UserAcc=data
     )
-
-  }
-
-  onsave() {
-    
+    this.modifierForm.disable();
   }
   
-  onModif() {
+formEnable(){
+this.isEnable=true;
+  if (this.isEnable){
+    this.modifierForm.enable()
+  }else{
+    this.modifierForm.disable();
+  }
+}
+onModif() {
     if (this.modifierForm) {
 
       const formData = this.modifierForm.value;
       console.log('Form data submitted:', formData);
-
-
       this.accountService.patchAccount(this.id, formData).subscribe(
         (result) => {
           console.log('Changes saved successfully:', result);
+          alert("Account Modified");
+          this.isEnable=false;
+          this.modifierForm.disable();
 
         },
         (error) => {

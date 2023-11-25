@@ -43,11 +43,15 @@ export class EventService {
   }
 
   getRequestsForEvent(eventId: number): Observable<any> {
-    // const RequestsUrl = `${URL}/${eventId}/requests`;  
-    // return this.http.get<Participant[]>(RequestsUrl);
+  
     return this.http.get<any>(URL+"/"+eventId).pipe(
       map(eventData=>eventData.requests ||[])
     )
+  }
+  deleteRequestsForEvent(eventId: number,reqId:number): Observable<any> {
+  
+    return this.http.delete<any>(URL+"/"+eventId+"/"+"requests/"+reqId)
+    
   }
   patchEvent(id:number,data:any):Observable<Event>{
     return this.http.patch<Event>(URL+"/"+id,data)
@@ -58,19 +62,18 @@ export class EventService {
     // Retrieve the current state of the event from the server
     return this.http.get<Event>(`${URL}/${eventId}`).pipe(
       switchMap((event: Event) => {
-        // Check if the 'requests' array is undefined, and initialize it if necessary
         if (!event.requests) {
           event.requests = [];
         }
-  
-        // Update the 'requests' property with the new participant
         event.requests.push(participant);
-  
-        // Send a PUT request to update the event on the server
         return this.http.put<Event>(`${URL}/${eventId}`, event);
       })
     );
   }
+  // deleteRequestFromEvent(eventId: number, requestId: number): Observable<any> {
+  //   const url = `${URL}/${eventId}/requests/${requestId}`;
+  //   return this.http.delete(url);
+  // }
   searchEventsGetter(searchValue:String):Observable<EventInterface[]>{
     return this.http.get<EventInterface[]>(
       URL+"?name_like="+searchValue

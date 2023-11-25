@@ -1,7 +1,10 @@
 body{margin-top:20px;
-    background-color:#f2f6fc;
+    background-color:#dae9ff;
     color:#92bdf8;
     }
+   /* .col-xl-8{
+    background-color: #d3dbe7;
+   } */
     .img-account-profile {
         height: 10rem;
     }
@@ -11,6 +14,7 @@ body{margin-top:20px;
     .card {
         box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
         /* padding: 10px 0; */
+        background-color: #e0ecfe;
     }
     .card .card-header {
         font-weight: 500;
@@ -61,7 +65,17 @@ body{margin-top:20px;
     .btn{
         padding: 10px;
         margin-left: 10px;
-        background-color: rgb(130, 0, 130);
-        border: 1px solid rgb(130, 0, 130) ;
+        background-color: rgb(197, 45, 197);
+        border: 1px solid rgb(180, 132, 180) ;
+        position: relative;
+        left: 270px;
     }
-   
+   #imgfun{
+    width: 240px;
+    height: 220px;
+    position: absolute;
+    z-index: 1;
+    /* top: 290px; */
+    left: -540px;
+    bottom: -110px;
+   }

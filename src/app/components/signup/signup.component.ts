@@ -21,7 +21,7 @@ export class SignupComponent  {
   ) {
     this.signupForm = this.formBuilder.group({
       name: ['', [Validators.required ,Validators.pattern('^[a-zA-Z]+$')]],
-      CIN: ['', [Validators.required],Validators.pattern('^[0-9]+$'),Validators.maxLength(8)],
+      CIN: ['', [Validators.required,Validators.pattern('^[0-9]+$'),Validators.maxLength(8)]],
       email: ['', [Validators.required, Validators.email]], 
       admin: [false],
       password: ['', [Validators.required,Validators.minLength(8)]],
@@ -35,9 +35,14 @@ export class SignupComponent  {
     if(this.signupForm.valid){
       const values=this.signupForm.value;
       this.accountService.addAccount(values).subscribe(
-        data =>console.log(data)
-      )
+        data =>console.log(data),
+        
+        )
+      
+      alert("account added succufully");
       this.router.navigate(['/login']);
+    }else {
+      
     }
   }
  
