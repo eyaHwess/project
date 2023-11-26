@@ -15,22 +15,6 @@
       ],
       "requests": [
         {
-          "id": 1,
-          "name": "malek",
-          "email": "malek@gmail.com",
-          "niveau": "22",
-          "phoneNumber": "22",
-          "memberId": 3
-        },
-        {
-          "id": 2,
-          "name": "malek",
-          "email": "malek@gmail.com",
-          "niveau": "22",
-          "phoneNumber": "1234",
-          "memberId": 3
-        },
-        {
           "id": 3,
           "name": "aram",
           "email": "aram@gmail.com",
@@ -44,20 +28,16 @@
           "email": "aram@gmail.com",
           "niveau": "d",
           "phoneNumber": "2222222"
-        },
+        }
+      ],
+      "participants": [
         {
-          "id": 5,
-          "name": "aram",
-          "email": "aram@gmail.com",
-          "niveau": "55",
-          "phoneNumber": "2222222"
-        },
-        {
-          "id": 6,
-          "name": "emna",
-          "email": "abdella@gmail.com",
+          "id": 1,
+          "name": "malek",
+          "email": "malek@gmail.com",
           "niveau": "22",
-          "phoneNumber": "23368882"
+          "phoneNumber": "22",
+          "memberId": 3
         }
       ]
     },
@@ -75,29 +55,31 @@
         {}
       ],
       "requests": [
+        {}
+      ]
+    },
+    {
+      "picture": "/assets/event3.jpeg",
+      "name": "BattleBots",
+      "nbMax": 20,
+      "date": "2024-01-20T10:00",
+      "dateL": "2024-01-15T12:00",
+      "prize": "3000",
+      "disponible": true,
+      "detail": "\"BattleBots\" is a fierce robot battle where teams unleash their custom-built bots armed with weapons and tactics to outmaneuver and defeat opponents. It's a high-octane clash of engineering and strategy in an electrifying arena. Sparks fly as robots vie for supremacy, making \"BattleBots\" the ultimate showcase of robotic prowess.",
+      "participant": [
+        {}
+      ],
+      "requests": [
         {},
         {
           "name": "aram",
           "email": "aram@gmail.com",
           "niveau": "2eme",
-          "phoneNumber": "23368882",
-          "memberId": 2
-        },
-        {
-          "name": "aram",
-          "email": "aram@gmail.com",
-          "niveau": "6",
-          "phoneNumber": "2222222",
-          "memberId": 2
-        },
-        {
-          "name": "aram",
-          "email": "aram@gmail.com",
-          "niveau": "",
-          "phoneNumber": "2222222",
-          "memberId": 2
+          "phoneNumber": "2222222"
         }
-      ]
+      ],
+      "id": 3
     }
   ]
 }

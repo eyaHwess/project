@@ -27,6 +27,8 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AccountSettingsComponent } from './components/admin_folder/account-settings/account-settings.component';
 import { AccountComponent } from './components/admin_folder/accounts/account/account.component';
+// import { ParticipantComponent } from './admin_foloder/participant/participant.component';
+import { ParticipantComponent } from './components/admin_folder/participant/participant.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import { AccountComponent } from './components/admin_folder/accounts/account/acc
     UserProfileComponent,
     AccountSettingsComponent,
     AccountComponent,
+    ParticipantComponent,
+    // ParticipantComponent,
     
   ],
   imports: [

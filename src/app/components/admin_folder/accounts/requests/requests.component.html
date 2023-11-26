@@ -6,9 +6,9 @@
     </li>
 </ul> -->
 <div class="container">
-    <div class="container">
-    <div class="container">
+
         <div class="row col-md-6 col-md-offset-2 custyle">
+            <h1> Liste des Requests</h1>
         <table class="table table-striped custab">
         <thead>
             <tr>
@@ -26,13 +26,13 @@
                 <td>{{user.email}}</td>
                 <td  >{{user.phoneNumber}}</td>
                 <td colspan="2">
-                    <button class="btn btn-primary" (click)="accepter()">Accept</button>
+                    <button class="btn btn-primary" (click)="accepter(user)">Accept</button>
                    
                 </td>
                 <td> <button class="btn btn-primary" (click)="refuser(user)">Refuse</button></td>
                
               </tr>
-              {{requests | json}}
+              <!-- {{requests | json}} -->
               
         </tbody>
         </table>

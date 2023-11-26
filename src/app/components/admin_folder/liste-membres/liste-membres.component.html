@@ -1,4 +1,16 @@
 <h1>List of Members </h1>
+<div class="container form-outline " id="search">
+  <form
+    [formGroup]="searchForm" class="searchBar " (ngSubmit)="onSearchSubmit()">
+    <div class="input-group rounded">
+      <input type="search" class="form-control rounded" placeholder="Search Member..." aria-label="Search" formControlName="searchValue" aria-describedby="search-addon" />
+      <span class="input-group-text border-0" id="search-addon" (click)="onSearchSubmit()">
+        <i class="fas fa-search" ></i>
+      </span>
+    </div>
+  </form>
+</div>
+
 <table class="table table-hover" id="back">
     <thead>
       <tr>

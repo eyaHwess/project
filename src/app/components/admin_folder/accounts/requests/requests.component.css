@@ -1,0 +1,29 @@
+body{
+
+}
+*{
+    text-align: center;
+}
+.table{
+    padding: 40px;
+    position: relative;
+    left: 200px;
+}
+
+h1{
+    position: relative;
+    left: 200px;
+    font-family: 'Nunito', sans-serif;
+    padding-bottom:50px ;
+}
+th{
+    color: darkmagenta;
+}
+.container{
+    text-align: center;
+}
+.btn{
+    color: black;
+    background-color: rgb(229, 201, 255);
+    border: 1px solid  rgb(229, 201, 255);
+}

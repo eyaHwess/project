@@ -31,25 +31,30 @@ export class RequestsComponent implements OnInit {
         }
    )
   }
-  accepter(){
-    
-    
+  accepter(user:Participant){
+     
+    this.eventService.addParticipantToEvent(this.id,user).subscribe(
+      (data) => {
+        alert("Request accepted");
+        console.log('Request accepted', data);
+      },
+      (error) => {
+        alert('Error accepting request"');
+        console.error('Error accepting request:', error);
+      }
+    );
+    this.refuser(user);
   }
   refuser(user:Participant){
     
-    this.eventService.deleteRequestsForEvent(this.id, user.id).subscribe(
+    this.eventService.deleteRequestFromEvent(this.id, user.id).subscribe(
       () => {
-        console.log('Request removed');
-        // Update the local data or UI
-        this.requests = this.requests.filter((req) => req.id !== user.id);
+        console.log('Request deleted successfully:', event);
       },
       (error) => {
         console.error('Error deleting request:', error);
       }
     );
-    
-    
-    
     };
 
  

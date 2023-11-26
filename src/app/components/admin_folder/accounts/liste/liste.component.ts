@@ -12,13 +12,14 @@ import { Participant } from 'src/app/classes/participant';
 export class ListeComponent implements OnInit {
   constructor(private eventService:EventService){}
 event:Event[]=[];
+participant:Participant[]=[]
 // participants:Account[]=[];
 ngOnInit(): void {
   this.eventService.getEvents().subscribe(
     data=>{
       this.event=data
     }
-  )
+  ) // this.eventService.getParticipantsForEvent()
 }
 
 deleteEvent(id:number){
