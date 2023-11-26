@@ -33,6 +33,7 @@ import { ParticipantComponent } from './components/admin_folder/participant/part
 // timezone
 import { TimezoneComponent } from './components/timezone/timezone.component';
 import { DatePipe } from '@angular/common';
+import { DtPipe } from './dt.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,6 +60,7 @@ import { DatePipe } from '@angular/common';
     AccountComponent,
     ParticipantComponent,
     TimezoneComponent,
+    DtPipe,
     
   ],
   imports: [

@@ -14,7 +14,7 @@
                         <h1 class="cycles_text">{{item.name}}</h1>
                         <h4 class="price_text">Event date: {{item.date | date}}</h4>
                         <h4 class="price_text">Registration deadline: {{item.dateL | date}}</h4>
-                        <h4 class="price_text">Prize : <span style=" color: #325662">{{item.prize}}</span></h4>
+                        <h4 class="price_text">Prize : <span style=" color: #325662">{{item.prize|dt}}</span></h4>
                         <p class="lorem_text">{{item.detail}}</p>
                         <div class="btn_main">
                             <a (click)="Redicrect(item.id)" class="btn btn-primary btn-lg">Register!</a>
