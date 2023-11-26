@@ -15,16 +15,23 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Phone Number</th>
+                <th >PhoneNumber</th>
+                <th colspan="2"></th>
+                <th></th>
         </thead>
         <tbody>
-            <!-- <tr *ngFor="let user of requests">
+            <tr *ngFor="let user of requests let i = index">
                 <td>{{user.id}}</td>
                 <td>{{user.name}}</td>
                 <td>{{user.email}}</td>
-                <td>{{user.phoneNumber}}</td>
-              </tr> -->
-              {{requests | json}}
+                <td >{{user.phoneNumber}}</td>
+                <td colspan="2">
+                    <button class="btn btn-primary" (click)="accepter()">Accept</button>
+                   
+                </td>
+                <td> <button class="btn btn-primary" (click)="refuser(user.id)">Refuse</button></td>
+               
+              </tr>
         </tbody>
         </table>
         </div>

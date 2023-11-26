@@ -35,9 +35,14 @@ export class SignupComponent  {
     if(this.signupForm.valid){
       const values=this.signupForm.value;
       this.accountService.addAccount(values).subscribe(
-        data =>console.log(data)
-      )
+        data =>console.log(data),
+        
+        )
+      
+      alert("account added succufully");
       this.router.navigate(['/login']);
+    }else {
+      
     }
   }
  

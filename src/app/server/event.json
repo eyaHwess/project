@@ -15,6 +15,7 @@
       ],
       "requests": [
         {
+          "id": 1,
           "name": "malek",
           "email": "malek@gmail.com",
           "niveau": "22",
@@ -22,11 +23,41 @@
           "memberId": 3
         },
         {
+          "id": 2,
           "name": "malek",
           "email": "malek@gmail.com",
           "niveau": "22",
           "phoneNumber": "1234",
           "memberId": 3
+        },
+        {
+          "id": 3,
+          "name": "aram",
+          "email": "aram@gmail.com",
+          "niveau": "zs",
+          "phoneNumber": "2222222",
+          "memberId": 2
+        },
+        {
+          "id": 4,
+          "name": "aram",
+          "email": "aram@gmail.com",
+          "niveau": "d",
+          "phoneNumber": "2222222"
+        },
+        {
+          "id": 5,
+          "name": "aram",
+          "email": "aram@gmail.com",
+          "niveau": "55",
+          "phoneNumber": "2222222"
+        },
+        {
+          "id": 6,
+          "name": "emna",
+          "email": "abdella@gmail.com",
+          "niveau": "22",
+          "phoneNumber": "23368882"
         }
       ]
     },
@@ -34,9 +65,9 @@
       "id": 2,
       "picture": "/assets/events/fnaf.jpg",
       "name": "FNAF animatronics",
-      "nbMax": 32,
-      "date": "2024-01-07T10:00",
-      "dateL": "2023-10-24T10:00",
+      "nbMax": 50,
+      "date": "2024-07-01T10:00:00.000Z",
+      "dateL": "2024-06-24T10:00:00.000Z",
       "prize": "4000DT",
       "disponible": false,
       "detail": "coming soon...",
@@ -44,7 +75,28 @@
         {}
       ],
       "requests": [
-        {}
+        {},
+        {
+          "name": "aram",
+          "email": "aram@gmail.com",
+          "niveau": "2eme",
+          "phoneNumber": "23368882",
+          "memberId": 2
+        },
+        {
+          "name": "aram",
+          "email": "aram@gmail.com",
+          "niveau": "6",
+          "phoneNumber": "2222222",
+          "memberId": 2
+        },
+        {
+          "name": "aram",
+          "email": "aram@gmail.com",
+          "niveau": "",
+          "phoneNumber": "2222222",
+          "memberId": 2
+        }
       ]
     }
   ]

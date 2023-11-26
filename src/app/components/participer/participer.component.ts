@@ -13,8 +13,11 @@ import { ActivatedRoute } from '@angular/Router';
 export class ParticiperComponent {
 
   participerForm!: FormGroup;
-  id: any;
- 
+  userId: number = parseInt(localStorage.getItem('userId') || '0', 10);
+  
+  eventId!:number;
+  part!:Participant;
+
   constructor(
     private fb:FormBuilder,
     private eventService:EventService,
@@ -23,13 +26,14 @@ export class ParticiperComponent {
     private activatedRoute: ActivatedRoute
   ){}
   ngOnInit(){
-    this.id=this.activatedRoute.snapshot.params['idf'];
+    // this.name=localStorage.getItem('name');
+    this.eventId=this.activatedRoute.snapshot.params['id'];
     this.participerForm=this.fb.group(
       {
         name:[this.authservice.getName()],
         email: [this.authservice.getEmail()],
         niveau: [''],
-        phoneNumber: [''],
+        phoneNumber: [this.authservice.getphone()],
       }
     );
 
@@ -38,20 +42,21 @@ export class ParticiperComponent {
   onSubmit() {
     
     const formValues = this.participerForm.value;
-    const memberId = this.authservice.GetUserId();
-
+    const memberId = this.userId;
+    
     if (memberId) {
       
-      const participant = { ...formValues, memberId };
+      const participant = { ...formValues };
 
       
-      this.eventService.addRequestsToEvent(this.id, participant).subscribe(
+      this.eventService.addRequestsToEvent(this.eventId, participant).subscribe(
         (data) => {
           
+          alert("Request added successfully");
           console.log('Request added successfully:', data);
         },
         (error) => {
-          
+          alert('Error adding request"');
           console.error('Error adding request:', error);
         }
       );

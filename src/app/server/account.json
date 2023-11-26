@@ -2,11 +2,11 @@
   "account": [
     {
       "name": "Eya",
-      "CIN": "11180366",
+      "CIN": "1123232",
       "email": "eya@gmail.com",
       "admin": true,
       "password": "eya121234",
-      "phoneNumber": "23232232",
+      "phoneNumber": "23234345",
       "id": 1
     },
     {

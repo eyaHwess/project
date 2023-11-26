@@ -15,6 +15,7 @@ export class AccountService {
   }
   addAccount(newaccount: Account): Observable<Account> {
     return this.http.post<Account>(URL, newaccount);
+    
   }
   getAccountById(accountId: number):Observable<Account>{
     return this.http.get<Account>(`${URL}/${accountId}`);

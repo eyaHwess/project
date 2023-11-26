@@ -13,6 +13,7 @@ export class RequestsComponent implements OnInit {
   
   id:number=0;
   requests:Participant[]=[];
+  idreq!:number;
   constructor(private activatedRoute:ActivatedRoute,
     private router:Router,
      private eventService:EventService){}
@@ -22,27 +23,33 @@ export class RequestsComponent implements OnInit {
         data => {
           console.log('data from requests', data);
           this.requests = data;
+          
         },
         error => {
           console.error('Error fetching data:', error);
         
         }
    )
-//    this.eventService.getRequestsForEvent(this.id).subscribe(
-//     data => {
-//       console.log('requests data',data);
-//       this.requests = data;},
-
-//     error=> console.error('Error fetching data ',error)
-     
-      
-//  );
- 
+  }
+  accepter(){
+    
     
   }
-  
+  refuser(id:number){
+    
+    this.eventService.deleteRequestsForEvent(this.id,id).subscribe(
+      () => {
+        console.log('Request removed');
+        
+      },
+      (error) => {
+        console.error('Error deleting request:', error);
+      }
+    );
+    
+    
+    
+    };
 
-  // ngOnInit(): void {
-  //   this.eventService.getRequestsForEvent(this.idfE).subscribe(data=>{this.request=data})
-  // }
+ 
 }

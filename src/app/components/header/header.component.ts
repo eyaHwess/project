@@ -9,10 +9,12 @@ import { AccountService } from 'src/app/services/account.service';
 export class HeaderComponent implements OnInit {
   constructor(private authService:AuthService){}
   btn!:boolean;
-  id!:number;
+  // id!:number;
+  userId: number = parseInt(localStorage.getItem('userId') || '0', 10);
   ngOnInit(): void {
     this.btn=this.authService.isLoggedIn();
-    this.id=this.authService.GetUserId();
+    
+    
   }
   logout(): void {
     this.authService.logout();

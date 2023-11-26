@@ -28,6 +28,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AccountSettingsComponent } from './components/admin_folder/account-settings/account-settings.component';
 import { AccountComponent } from './components/admin_folder/accounts/account/account.component';
 
+// timezone
+import { TimezoneComponent } from './components/timezone/timezone.component';
+import { DatePipe } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +55,7 @@ import { AccountComponent } from './components/admin_folder/accounts/account/acc
     UserProfileComponent,
     AccountSettingsComponent,
     AccountComponent,
+    TimezoneComponent,
     
   ],
   imports: [
@@ -59,9 +63,10 @@ import { AccountComponent } from './components/admin_folder/accounts/account/acc
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

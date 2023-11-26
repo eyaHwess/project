@@ -11,7 +11,7 @@ export class AuthService {
   private email:String='';
   private name:String='';
   private role:string='';
-constructor(private http:HttpClient,private accountservice:AccountService,private router:Router){
+  constructor(private http:HttpClient,private accountservice:AccountService,private router:Router){
   const isAuthenticatedValue = localStorage.getItem('isAuthenticated');
 
   if (isAuthenticatedValue !== null) {
@@ -30,8 +30,14 @@ login(email: string, password: string): void {
       );
       if (authenticatedUser) {
         this.isAuthenticated = true;
+        
         localStorage.setItem('isAuthenticated','true')
         localStorage.setItem('userId', authenticatedUser.id.toString());
+        localStorage.setItem('name', authenticatedUser.name);
+        localStorage.setItem('email', authenticatedUser.email);
+        localStorage.setItem('cin', authenticatedUser.CIN);
+        localStorage.setItem('phone', authenticatedUser.phoneNumber);
+        localStorage.setItem('password', authenticatedUser.password);
         // this.userId=authenticatedUser.id;
         // this.email=authenticatedUser.email;
         // this.name=authenticatedUser.name;
@@ -77,12 +83,22 @@ GetUserId(){
   return this.userId;
 }
 getEmail(){
- return this.email;
+ return localStorage.getItem('email');
 }
 getName(){
-  return this.name;
+  return localStorage.getItem('name');
  }
  getRole(){
   return this.role;
+ }
+ getcin() {
+  return localStorage.getItem('cin');
+}
+
+ getphone(){
+  return localStorage.getItem('phone');
+ }
+ getpass(){
+  return localStorage.getItem('password');
  }
 }
