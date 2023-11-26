@@ -43,11 +43,11 @@ export class RequestsComponent implements OnInit {
         console.error('Error accepting request:', error);
       }
     );
-    this.refuser(user);
+    this.refuser(user.id);
   }
   refuser(id:number){
     
-    this.eventService.deleteRequestFromEvent(this.id, user.id).subscribe(
+    this.eventService.deleteRequestFromEvent(this.id, id).subscribe(
       () => {
         console.log('Request deleted successfully:', event);
       },
