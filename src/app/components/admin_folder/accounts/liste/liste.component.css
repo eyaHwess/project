@@ -1,4 +1,26 @@
 #req{
     text-decoration: none;
-    /* background-color: ; */
+    background-color:rgb(255, 235, 255);
+    /* font-weight: bold; */
+    border: 1px solid darkmagenta;;
+
+}
+
+h1{
+    font-family: 'Nunito', sans-serif;
+    padding-bottom: 50px;
+}
+table{
+    padding:20px ;
+}
+th{
+    color: darkmagenta;
+}
+.btn-primary{
+    color: black;
+    background-color:rgb(255, 236, 255);
+    border: 1px solid darkmagenta;;
+}
+ul{
+    list-style-type: none;
 }

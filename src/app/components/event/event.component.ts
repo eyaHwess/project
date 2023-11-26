@@ -33,6 +33,7 @@ export class EventComponent implements OnInit {
   onSearchSubmit(): void {
     this.searchValue = this.searchForm.value.searchValue ?? '';
     this.fetchData();
+    
   }
   
 

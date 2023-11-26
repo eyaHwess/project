@@ -7,7 +7,7 @@ import { Account } from '../classes/account';
 import { AuthService } from './auth.service';
 import { AccountService } from './account.service';
 import { EventInterface } from '../event-interface';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 // import { switchMap } from 'rxjs/internal/operators/switchMap';
 
@@ -34,13 +34,13 @@ export class EventService {
     return this.http.delete(URL+"/"+id)
   }
   getParticipantsForEvent(eventId: number): Observable<Participant[]> {
-    return this.http.get<any>(URL+"/"+eventId).pipe(
-      map(eventData=>eventData.participant ||[]))
+    const participantsUrl = `${URL}/${eventId}/participants`; 
+    return this.http.get<Participant[]>(participantsUrl);
   }
-  addParticipantToEvent(eventId: number, participant: Participant): Observable<Event> {
-    const participantUrl = `${URL}/${eventId}/participants`; 
-    return this.http.post<Event>(participantUrl, participant);
-  }
+  // addParticipantToEvent(eventId: number, participant: Account): Observable<Event> {
+  //   const participantUrl = `${URL}/${eventId}/participants`;  // Assuming a route like /event/:eventId/participants
+  //   return this.http.post<Event>(participantUrl, participant);
+  // }
 
   getRequestsForEvent(eventId: number): Observable<any> {
   
@@ -48,13 +48,11 @@ export class EventService {
       map(eventData=>eventData.requests ||[])
     )
   }
- 
+  // deleteRequestsForEvent(eventId: number,reqId:number): Observable<any> {
   
-  deleteRequestsForEvent(eventId: number,reqId:number){
-  
-    return this.http.delete(`${URL}/${eventId}/requests/${reqId}`)
+  //   return this.http.delete<any>(URL+"/"+eventId+"/"+"requests/"+reqId)
     
-  }
+  // }
   patchEvent(id:number,data:any):Observable<Event>{
     return this.http.patch<Event>(URL+"/"+id,data)
   }
@@ -72,6 +70,20 @@ export class EventService {
       })
     );
   }
+  addParticipantToEvent(eventId: number, participant: Participant): Observable<Event> {
+    const RequestsUrl = `${URL}/${eventId}/requests`;
+  
+    // Retrieve the current state of the event from the server
+    return this.http.get<Event>(`${URL}/${eventId}`).pipe(
+      switchMap((event: Event) => {
+        if (!event.participants) {
+          event.participants = [];
+        }
+        event.participants.push(participant);
+        return this.http.put<Event>(`${URL}/${eventId}`, event);
+      })
+    );
+  }
   // deleteRequestFromEvent(eventId: number, requestId: number): Observable<any> {
   //   const url = `${URL}/${eventId}/requests/${requestId}`;
   //   return this.http.delete(url);
@@ -81,4 +93,29 @@ export class EventService {
       URL+"?name_like="+searchValue
     )
   }
+  deleteRequestFromEvent(eventId: number, requestId: number): Observable<Event> {
+    const RequestsUrl = `${URL}/${eventId}/requests`;
+  
+    
+    return this.http.get<Event>(`${URL}/${eventId}`).pipe(
+      switchMap((event: Event) => {
+        if (!event.requests) {
+          return throwError('Event requests not found');
+        }
+  
+        const requestIndex = event.requests.findIndex(req => req.id === requestId);
+  
+        if (requestIndex === -1) {
+          return throwError('Request not found in the event');
+        }
+  
+        // Remove the request from the array
+        event.requests.splice(requestIndex, 1);
+  
+        // Update the event on the server
+        return this.http.put<Event>(`${URL}/${eventId}`, event);
+      })
+    );
+  }
+  
 }

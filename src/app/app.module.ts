@@ -27,6 +27,8 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AccountSettingsComponent } from './components/admin_folder/account-settings/account-settings.component';
 import { AccountComponent } from './components/admin_folder/accounts/account/account.component';
+// import { ParticipantComponent } from './admin_foloder/participant/participant.component';
+import { ParticipantComponent } from './components/admin_folder/participant/participant.component';
 
 // timezone
 import { TimezoneComponent } from './components/timezone/timezone.component';
@@ -55,6 +57,7 @@ import { DatePipe } from '@angular/common';
     UserProfileComponent,
     AccountSettingsComponent,
     AccountComponent,
+    ParticipantComponent,
     TimezoneComponent,
     
   ],

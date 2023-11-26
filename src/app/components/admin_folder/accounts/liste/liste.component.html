@@ -1,7 +1,7 @@
 <div id="container">
     <!-- <router-outlet></router-outlet> -->
     <div class="eventlist">
-        <h1>List Admins</h1>
+        <h1>List Events</h1>
     <table class="table table-hover">
         <thead>
           <tr>
@@ -13,31 +13,38 @@
             <th scope="col">Disponible</th>
             <th scope="col">Participant</th>
             <th scope="col">Requests</th>
-            <th scope="col">Options</th>
+            <th scope="col" colspan="2">Options</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let item of event">
             <th scope="row">{{item.id}}</th>
             <td>{{item.name}}</td>
-            <td>{{item.date}}</td>
-            <td>{{item.dateL}}</td>
+            <td>{{item.date  | date }}</td>
+            <td>{{item.dateL | date }}</td>
             <td>{{item.prize}}</td>
             <td>{{item.disponible}}</td>
             <td>
-                {{item.participants}}
+              <ul>
+                <li *ngFor="let part of item.participants">
+                  <app-participant [participant]="part"></app-participant>
+                </li>
+              </ul>
+                
             </td>
             <td>
-               <a [routerLink]="['/admin/requests', item.id]" id="req">Requests</a>
+               <a [routerLink]="['/admin/requests', item.id]" id="req" class="btn">Requests</a>
             </td>
             <td>
-              <a [routerLink]="['/admin/modifier',item.id]">Modify</a>
-              <button (click)="deleteEvent(item.id)">Delete</button>
+              <a [routerLink]="['/admin/modifier',item.id]" class="btn btn-primary">Modify</a>
+          
             </td>
+            <td>    <button (click)="deleteEvent(item.id)" class="btn btn-primary">Delete</button></td>
           </tr>
         </tbody>
       </table>
-      <button routerLink="/admin/ajouter">Add Event</button>
+      <button routerLink="/admin/ajouter" class="btn btn-primary     ">Add Event</button>
     
     </div>
     </div>
