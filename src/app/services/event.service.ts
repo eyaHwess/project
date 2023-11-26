@@ -102,17 +102,12 @@ export class EventService {
         if (!event.requests) {
           return throwError('Event requests not found');
         }
-  
         const requestIndex = event.requests.findIndex(req => req.id === requestId);
   
         if (requestIndex === -1) {
           return throwError('Request not found in the event');
         }
-  
-        // Remove the request from the array
         event.requests.splice(requestIndex, 1);
-  
-        // Update the event on the server
         return this.http.put<Event>(`${URL}/${eventId}`, event);
       })
     );

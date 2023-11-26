@@ -1,6 +1,7 @@
 
 #container{
-  display: inline-block
+  display: inline-block;
+
 } 
 .menu {
   position: fixed;
@@ -16,7 +17,12 @@
   text-align: center;
   margin-left: 230px;
    padding:30px 35px;
- 
+   background-color:rgb(254, 244, 255);
+   height: 100vh;
+   /* background: url(/assets/admin2.jpg) no-repeat;
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed; */
 }
 
 .img-account-profile {

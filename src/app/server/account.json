@@ -32,9 +32,27 @@
       "CIN": "11111111",
       "email": "emna@gmail.com",
       "admin": false,
-      "password": "eya121234",
+      "password": "emna1234",
       "phoneNumber": "23232232",
       "id": 4
+    },
+    {
+      "name": "ahmed",
+      "CIN": "12345678",
+      "email": "ahmed@gmail.com",
+      "admin": false,
+      "password": "ahmed123",
+      "phoneNumber": "22365874",
+      "id": 5
+    },
+    {
+      "name": "shaima",
+      "CIN": "11987654",
+      "email": "shaima@gmail.com",
+      "admin": false,
+      "password": "shaima123",
+      "phoneNumber": "78945612",
+      "id": 6
     }
   ]
 }

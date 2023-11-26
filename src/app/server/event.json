@@ -15,18 +15,22 @@
       ],
       "requests": [
         {
-          "id": 3,
-          "name": "aram",
-          "email": "aram@gmail.com",
-          "niveau": "zs",
-          "phoneNumber": "2222222",
-          "memberId": 2
-        },
-        {
           "id": 4,
           "name": "aram",
           "email": "aram@gmail.com",
           "niveau": "d",
+          "phoneNumber": "2222222"
+        },
+        {
+          "name": "ahmed",
+          "email": "ahmed@gmail.com",
+          "niveau": "2eme annee",
+          "phoneNumber": "22365874"
+        },
+        {
+          "name": "aram",
+          "email": "aram@gmail.com",
+          "niveau": "2",
           "phoneNumber": "2222222"
         }
       ],
@@ -71,15 +75,51 @@
         {}
       ],
       "requests": [
-        {},
         {
-          "name": "aram",
-          "email": "aram@gmail.com",
-          "niveau": "2eme",
-          "phoneNumber": "2222222"
+          "name": "shaima",
+          "email": "shaima@gmail.com",
+          "niveau": "3",
+          "phoneNumber": "78945612"
+        },
+        {
+          "name": "ahmed",
+          "email": "ahmed@gmail.com",
+          "niveau": "4",
+          "phoneNumber": "22365874"
         }
       ],
-      "id": 3
+      "id": 3,
+      "participants": [
+        {
+          "name": "emna",
+          "email": "emna@gmail.com",
+          "niveau": "2",
+          "phoneNumber": "23232232"
+        },
+        {
+          "name": "emna",
+          "email": "emna@gmail.com",
+          "niveau": "2",
+          "phoneNumber": "23232232"
+        }
+      ]
+    },
+    {
+      "picture": "/assets/event44.jpg",
+      "name": "Robotics Expo",
+      "nbMax": 20,
+      "date": "2024-03-20T10:00",
+      "dateL": "2024-04-15T00:00",
+      "prize": "1000",
+      "disponible": false,
+      "detail": "The Robotics Expo is a dynamic showcase of cutting-edge innovations in robotics. Engineers, enthusiasts, and innovators converge to present and explore the latest advancements in robotic technology. The event features live demonstrations, interactive exhibits, and opportunities for networking, providing a platform for sharing ideas and fostering collaboration in the exciting field of robotics.",
+      "participant": [
+        {}
+      ],
+      "requests": [
+        {}
+      ],
+      "id": 4
     }
   ]
 }
