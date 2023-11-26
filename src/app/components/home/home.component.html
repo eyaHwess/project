@@ -14,7 +14,7 @@
 <div class="cards" id="services">
     <h2 class="title">Events</h2>
     <div class="content">
-      <div *ngFor="let item of events">
+      <div *ngFor="let item of events |slice:0:2">
         <div class="card">
             <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
               <img [src]='item.picture' class="mx-auto d-block"/>

@@ -2,9 +2,11 @@ body{margin-top:20px;
     background-color:#dae9ff;
     color:#92bdf8;
     }
-   /* .col-xl-8{
-    background-color: #d3dbe7;
-   } */
+   
+   .prof{
+    color: #044ab2;
+    text-decoration: none;
+   }
     .img-account-profile {
         height: 10rem;
     }
@@ -71,11 +73,10 @@ body{margin-top:20px;
         left: 270px;
     }
    #imgfun{
-    width: 240px;
-    height: 220px;
+    width: 220px;
+    height: 200px;
     position: absolute;
     z-index: 1;
-    /* top: 290px; */
-    left: -540px;
+    left: -520px;
     bottom: -110px;
    }

@@ -3,8 +3,9 @@
 .time-container {
     text-align: center;
     padding: 5px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
+    border: 1px solid #ffffff;
+    background-color: rgb(253, 248, 253);
+
   }
   
   .time-heading {
@@ -15,5 +16,7 @@
     font-size: 20px;
     font-weight: bold;
     color: #007bff;
+    position: relative;
+    bottom: -30px;
   }
   

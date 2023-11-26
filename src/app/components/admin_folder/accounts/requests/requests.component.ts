@@ -45,7 +45,7 @@ export class RequestsComponent implements OnInit {
     );
     this.refuser(user);
   }
-  refuser(id:number){
+  refuser(user:Participant){
     
     this.eventService.deleteRequestFromEvent(this.id, user.id).subscribe(
       () => {
