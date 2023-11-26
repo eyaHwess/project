@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/Router';
+import { switchMap } from 'rxjs/operators';
 import { Account } from 'src/app/classes/account';
 import { Participant } from 'src/app/classes/participant';
 import { EventService } from 'src/app/services/event.service';
@@ -31,19 +32,36 @@ export class RequestsComponent implements OnInit {
         }
    )
   }
-  accepter(user:Participant){
+  // accepter(user:Participant){
      
-    this.eventService.addParticipantToEvent(this.id,user).subscribe(
-      (data) => {
-        alert("Request accepted");
+  //   this.eventService.addParticipantToEvent(this.id,user).subscribe(
+  //     (data) => {
+  //       alert("Request accepted");
+  //       console.log('Request accepted', data);
+  //       return this.eventService.deleteRequestFromEvent(this.id, user.id);
+  //     },
+  //     (error) => {
+  //       alert('Error accepting request"');
+  //       console.error('Error accepting request:', error);
+  //     }
+  //   );
+  //   // this.refuser(user);
+  // }
+  accepter(user: Participant) {
+    this.eventService.addParticipantToEvent(this.id, user).pipe(
+      switchMap((data) => {
+        alert('Request accepted');
         console.log('Request accepted', data);
+        return this.eventService.deleteRequestFromEvent(this.id, user.id);
+      })
+    ).subscribe(
+      () => {
+        console.log('Request deleted successfully');
       },
       (error) => {
-        alert('Error accepting request"');
-        console.error('Error accepting request:', error);
+        console.error('Error deleting request:', error);
       }
     );
-    this.refuser(user);
   }
   refuser(user:Participant){
     

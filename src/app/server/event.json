@@ -20,6 +20,18 @@
           "email": "aram@gmail.com",
           "niveau": "d",
           "phoneNumber": "2222222"
+        },
+        {
+          "name": "ahmed",
+          "email": "ahmed@gmail.com",
+          "niveau": "2eme annee",
+          "phoneNumber": "22365874"
+        },
+        {
+          "name": "aram",
+          "email": "aram@gmail.com",
+          "niveau": "2",
+          "phoneNumber": "2222222"
         }
       ],
       "participants": [
@@ -63,15 +75,34 @@
         {}
       ],
       "requests": [
-        {},
         {
-          "name": "aram",
-          "email": "aram@gmail.com",
-          "niveau": "2eme",
-          "phoneNumber": "2222222"
+          "name": "shaima",
+          "email": "shaima@gmail.com",
+          "niveau": "3",
+          "phoneNumber": "78945612"
+        },
+        {
+          "name": "ahmed",
+          "email": "ahmed@gmail.com",
+          "niveau": "4",
+          "phoneNumber": "22365874"
         }
       ],
-      "id": 3
+      "id": 3,
+      "participants": [
+        {
+          "name": "emna",
+          "email": "emna@gmail.com",
+          "niveau": "2",
+          "phoneNumber": "23232232"
+        },
+        {
+          "name": "emna",
+          "email": "emna@gmail.com",
+          "niveau": "2",
+          "phoneNumber": "23232232"
+        }
+      ]
     },
     {
       "picture": "/assets/event44.jpg",

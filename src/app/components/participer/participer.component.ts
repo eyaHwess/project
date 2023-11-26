@@ -4,7 +4,7 @@ import { Participant } from 'src/app/classes/participant';
 import { AccountService } from 'src/app/services/account.service';
 import { EventService } from 'src/app/services/event.service';
 import { AuthService } from 'src/app/services/auth.service';
-import { ActivatedRoute } from '@angular/Router';
+import { ActivatedRoute, Router } from '@angular/Router';
 @Component({
   selector: 'app-participer',
   templateUrl: './participer.component.html',
@@ -17,13 +17,15 @@ export class ParticiperComponent {
   
   eventId!:number;
   part!:Participant;
+  etat:boolean=false;
 
   constructor(
     private fb:FormBuilder,
     private eventService:EventService,
     private accountServive:AccountService,
     private authservice:AuthService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private router :Router
   ){}
   ngOnInit(){
     // this.name=localStorage.getItem('name');
@@ -52,8 +54,10 @@ export class ParticiperComponent {
       this.eventService.addRequestsToEvent(this.eventId, participant).subscribe(
         (data) => {
           
-          alert("Request added successfully");
+          alert("Request added successfully, We will Send an email for the result ");
           console.log('Request added successfully:', data);
+          this.router.navigate(['home/',this.eventId]);
+          this.etat=true;
         },
         (error) => {
           alert('Error adding request"');
