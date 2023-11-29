@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { Route, Router } from '@angular/Router';
-import { Robot } from 'src/app/classes/robot';
+
 import { EventService } from 'src/app/services/event.service';
 
 @Component({

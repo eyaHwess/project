@@ -53,6 +53,7 @@ export class RequestsComponent implements OnInit {
         alert('Request accepted');
         console.log('Request accepted', data);
         return this.eventService.deleteRequestFromEvent(this.id, user.id);
+        
       })
     ).subscribe(
       () => {
@@ -68,6 +69,7 @@ export class RequestsComponent implements OnInit {
     this.eventService.deleteRequestFromEvent(this.id, user.id).subscribe(
       () => {
         console.log('Request deleted successfully:', event);
+        window.location.reload()
       },
       (error) => {
         console.error('Error deleting request:', error);
